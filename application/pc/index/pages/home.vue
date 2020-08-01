@@ -6,7 +6,9 @@
           <div v-show="section.first" class="textbox">
             <p class="en">Black Diamond Wallet</p>
             <p class="cn">黑钻钱包 通往区块链世界</p>
-            <p class="desc">黑钻钱包全球首创去中心化区块链评级模式，通过社区化评级报告，加深用户对区块链的理解和认知；同时我们为用户提供多元化的区块链金融服务，助力用户实现稳健的区块链资产增益。</p>
+            <p
+              class="desc"
+            >黑钻钱包全球首创去中心化区块链评级模式，通过社区化评级报告，加深用户对区块链的理解和认知；同时我们为用户提供多元化的区块链金融服务，助力用户实现稳健的区块链资产增益。</p>
             <div class="weixin pc-show">
               <img :src="$assets.downewm" />
               <div class="tips">
@@ -23,7 +25,9 @@
           </div>
         </transition>
         <transition name="fade-right">
-          <div class="image1" v-show="section.first"><img width="350" :src="$assets.conitemImg1" /></div>
+          <div class="image1" v-show="section.first">
+            <img :src="$assets.conitemImg1" />
+          </div>
         </transition>
       </div>
     </div>
@@ -38,14 +42,18 @@
           </div>
         </transition>
         <transition name="fade-right">
-          <div class="image" v-show="section.second"><img :src="$assets.conitemImg2" /></div>
+          <div class="image" v-show="section.second">
+            <img :src="$assets.conitemImg2" />
+          </div>
         </transition>
       </div>
     </div>
     <div class="conitem-bg3 bgcolor">
       <div class="container conitem third align-right">
         <transition name="fade-left">
-          <div class="image" v-show="section.third"><img :src="$assets.conitemImg3" /></div>
+          <div class="image" v-show="section.third">
+            <img :src="$assets.conitemImg3" />
+          </div>
         </transition>
         <transition name="fade-right">
           <div v-show="section.third" class="textbox">
@@ -68,7 +76,9 @@
           </div>
         </transition>
         <transition name="fade-right">
-          <div class="image" v-show="section.fourth"><img :src="$assets.conitemImg4" /></div>
+          <div class="image" v-show="section.fourth">
+            <img :src="$assets.conitemImg4" />
+          </div>
         </transition>
       </div>
     </div>
@@ -126,7 +136,6 @@
     </div>
     -->
 
-
     <!-- PC黑钻积分应用场景 -->
     <!--
     <div class="conitem-bg9">
@@ -153,9 +162,6 @@
 
     <!-- WAP黑钻积分应用场景 -->
 
-
-
-
     <div class="conitem-bg6 bgcolor">
       <div class="container conitem customers">
         <transition name="fade-top">
@@ -174,7 +180,9 @@
                   <p class="job">HelloEOS创始人，YOYOW联合创始人</p>
                 </div>
               </div>
-              <p class="content">黑钻评级独创的“超级评审团”制度，以纯粹去中心化的方式重新定义了这个领域，真正规避某个或某些“中心”对评级结果的操控，避免权和利的寻租空间，给用户提供最真实的项目评价和最靠谱的投资参考。黑钻评级让我们看到，去中心化绝不仅限于比特币，就像比特币颠覆了货币的逻辑，我们也可以用分布式自治重新改造任何一个需要“信用”的场景。</p>
+              <p
+                class="content"
+              >黑钻评级独创的“超级评审团”制度，以纯粹去中心化的方式重新定义了这个领域，真正规避某个或某些“中心”对评级结果的操控，避免权和利的寻租空间，给用户提供最真实的项目评价和最靠谱的投资参考。黑钻评级让我们看到，去中心化绝不仅限于比特币，就像比特币颠覆了货币的逻辑，我们也可以用分布式自治重新改造任何一个需要“信用”的场景。</p>
             </li>
             <li>
               <div class="author">
@@ -184,7 +192,9 @@
                   <p class="job">比特时代副总裁</p>
                 </div>
               </div>
-              <p class="content">黑钻评级的超级评审团产出了大量有价值的的社区评级，这些评级对投资者有着重要的参考作用。另外，黑钻团队是我见过熊市做事的典范，这样的项目和团队应该得到更广泛的支持</p>
+              <p
+                class="content"
+              >黑钻评级的超级评审团产出了大量有价值的的社区评级，这些评级对投资者有着重要的参考作用。另外，黑钻团队是我见过熊市做事的典范，这样的项目和团队应该得到更广泛的支持</p>
             </li>
             <li>
               <div class="author">
@@ -194,7 +204,9 @@
                   <p class="job">Coinvoice CEO</p>
                 </div>
               </div>
-              <p class="content">黑钻评级通过去中心化的方式很好的解决了用户的信任问题；通过超级评审员引导、普通用户一起参与的方式，解决了流量的问题。评级内容是区块链投资者的刚需，未来会有很大的发展空间</p>
+              <p
+                class="content"
+              >黑钻评级通过去中心化的方式很好的解决了用户的信任问题；通过超级评审员引导、普通用户一起参与的方式，解决了流量的问题。评级内容是区块链投资者的刚需，未来会有很大的发展空间</p>
             </li>
           </ul>
         </transition>
@@ -209,7 +221,7 @@
           </div>
         </transition>
         <transition name="fade-bottom">
-          <ul v-show="section.ninth"  class="partner-list">
+          <ul v-show="section.ninth" class="partner-list">
             <li class="icon icon-aex"></li>
             <li class="icon icon-zgtop"></li>
             <li class="icon icon-cex"></li>
@@ -256,90 +268,92 @@
 </template>
 
 <script>
-  import circleProgress from '~components/circleProgress';
-  export default {
-    name: 'HZPJ-home',
-    components: {
-      circleProgress
-    },
-    data() {
-      return {
-        itemData: [],
-        section: {}
+import circleProgress from "~components/circleProgress";
+export default {
+  name: "HZPJ-home",
+  components: {
+    circleProgress,
+  },
+  data() {
+    return {
+      itemData: [],
+      section: {},
+    };
+  },
+  computed: {},
+  methods: {
+    //滚动显示动效
+    showSection(e) {
+      if (
+        this.section.second &&
+        this.section.third &&
+        this.section.fourth &&
+        // this.section.fifth &&
+        this.section.sixth &&
+        this.section.seventh &&
+        this.section.eighth &&
+        this.section.ninth
+      ) {
+        window.removeEventListener("scroll", this.showSection, false);
+      }
+      let scrollTop = 0;
+      if (document.documentElement && document.documentElement.scrollTop) {
+        scrollTop = document.documentElement.scrollTop;
+      } else if (document.body) {
+        scrollTop = document.body.scrollTop;
+      }
+      if (scrollTop > 660 - 250 && !this.section.second) {
+        this.$set(this.section, "second", true);
+      }
+      if (scrollTop > 660 * 2 - 250 && !this.section.third) {
+        this.$set(this.section, "third", true);
+      }
+      if (scrollTop > 660 * 3 - 250 && !this.section.fourth) {
+        this.$set(this.section, "fourth", true);
+      }
+      // if (scrollTop > (660 * 4 - 250) && !this.section.fifth) {
+      //   this.$set(this.section, 'fifth', true);
+      // }
+      if (scrollTop > 660 * 4 - 250 && !this.section.eighth) {
+        this.$set(this.section, "eighth", true);
+      }
+      if (scrollTop > 660 * 5 - 250 && !this.section.ninth) {
+        this.$set(this.section, "ninth", true);
+      }
+      if (scrollTop > 660 * 6 - 250 && !this.section.sixth) {
+        this.$set(this.section, "sixth", true);
+      }
+      if (scrollTop > 660 * 7 - 250 && !this.section.seventh) {
+        this.$set(this.section, "seventh", true);
       }
     },
-    computed: {},
-    methods: {
-      //滚动显示动效
-      showSection(e) {
-        if (this.section.second &&
-          this.section.third &&
-          this.section.fourth &&
-          // this.section.fifth &&
-          this.section.sixth &&
-          this.section.seventh &&
-          this.section.eighth &&
-          this.section.ninth) {
-          window.removeEventListener('scroll', this.showSection, false);
-        }
-        let scrollTop = 0;
-        if (document.documentElement && document.documentElement.scrollTop) {
-          scrollTop = document.documentElement.scrollTop;
-        } else if (document.body) {
-          scrollTop = document.body.scrollTop;
-        }
-        if (scrollTop > (660 - 250) && !this.section.second) {
-          this.$set(this.section, 'second', true);
-        }
-        if (scrollTop > (660 * 2 - 250) && !this.section.third) {
-          this.$set(this.section, 'third', true);
-        }
-        if (scrollTop > (660 * 3 - 250) && !this.section.fourth) {
-          this.$set(this.section, 'fourth', true);
-        }
-        // if (scrollTop > (660 * 4 - 250) && !this.section.fifth) {
-        //   this.$set(this.section, 'fifth', true);
-        // }
-        if (scrollTop > (660 * 4 - 250) && !this.section.eighth) {
-          this.$set(this.section, 'eighth', true);
-        }
-        if (scrollTop > (660 * 5 - 250) && !this.section.ninth) {
-          this.$set(this.section, 'ninth', true);
-        }
-        if (scrollTop > (660 * 6 - 250) && !this.section.sixth) {
-          this.$set(this.section, 'sixth', true);
-        }
-        if (scrollTop > (660 * 7 - 250) && !this.section.seventh) {
-          this.$set(this.section, 'seventh', true);
-        }
-      },
-      //跳转至项目详情页
-      gotoDetail(id){
-        this.$router.push({
-          path:`/detail/${id}`
-        });
-      },
-      //打开下载页 https://wx.heizuan.com/doc/hzpj.pdf
-      Download(){
-        location.href = "https://wx.heizuan.com/down.html";
-      },
-      Viewbook(){
-        location.href = "https://wx.heizuan.com/doc/hzpj.pdf";
-      }
-    },
-    mounted() {
-      //获取项目列表
-      Ajax.get(Api.get_item_list, {
-        page_size: 6,
-        order: 1
-      }).then(res => {
-        this.itemData = res.data.itemData;
+    //跳转至项目详情页
+    gotoDetail(id) {
+      this.$router.push({
+        path: `/detail/${id}`,
       });
-      //显示首屏
-      setTimeout(() => {
-        this.$set(this.section, 'first', true);
-      }, 0);
-      window.addEventListener("scroll", this.showSection, false);
-    }
-  }
+    },
+    //打开下载页 https://wx.heizuan.com/doc/hzpj.pdf
+    Download() {
+      location.href = "http://fir.heizuan.com/bv9j";
+    },
+    Viewbook() {
+      location.href = "https://wx.heizuan.com/doc/hzpj.pdf";
+    },
+  },
+  mounted() {
+    //获取项目列表
+    Ajax.get(Api.get_item_list, {
+      page_size: 6,
+      order: 1,
+    }).then((res) => {
+      this.itemData = res.data.itemData;
+    });
+    //显示首屏
+    setTimeout(() => {
+      this.$set(this.section, "first", true);
+    }, 0);
+    window.addEventListener("scroll", this.showSection, false);
+  },
+};
 </script>

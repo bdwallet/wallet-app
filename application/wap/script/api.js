@@ -164,7 +164,7 @@ export default {
     get_search_label:`${php}bourse.get_search_label`, // get 获取交易所排序类型标签
 
     //年终盘点
-    YearlyStatistics:`${php}YearlyStatistics.get` // get 获取2019年总数据
+    YearlyStatistics:`${php}YearlyStatistics.get`, // get 获取2019年总数据
     
     // 理财支付接口
     finance_addBill: `${php}finance.addBill`, // POST 提交理财购买数据

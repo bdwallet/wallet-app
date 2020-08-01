@@ -17,7 +17,7 @@ module.exports = {
 	publics : '', //isPro ? '/' : '',
 
 	// 调试端口
-	devport : 8080,
+	devport : 8082,
 	
 	// 自动打开浏览器
 	autoOpenBrowser : false,

@@ -44,7 +44,7 @@
         flex-wrap: wrap;
         font-size: .6rem;
         .logo-box{
-          order:1;
+          display: none;
           img{
             display: block;
             &.logo{
@@ -58,9 +58,7 @@
         }
         .info{
           margin-top:1.25rem;
-          order:3;
           .tel{
-            display: flex;
             justify-content: space-between;
             font-size: .7rem;
           }
@@ -70,7 +68,6 @@
           }
         }
         .weixin{
-          order:2;
           img{
             display: block;
             width: 1.8rem;
@@ -160,13 +157,14 @@
             width: 100%;
             flex-direction: column;
             .desc{
-              display: none;
+              display: block;
+              width: 80%;
+              margin-top: 10px;
+              margin-bottom: 10px;
             }
             .btns{
               display: flex;
-              width: 100%;
               padding: 0 .75rem;
-              margin-top:60vh;
               justify-content: space-between;
               .btn{
                 width: 7.8rem;
@@ -177,9 +175,6 @@
             }
           }
           .image1{
-            position: absolute;
-            opacity: .3;
-            z-index: 0;
           }
         }
         &.third{
@@ -252,9 +247,9 @@
         padding:0 1.5rem;
         .list{
           padding:0;
-          justify-content: space-between;
+          justify-content: space-evenly;
           span{
-            margin: 0;
+            margin: 5px;
           }
         }
       }
