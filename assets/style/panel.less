@@ -1,0 +1,67 @@
+.f-r{
+	float:right;
+}
+// 面板样式
+@panel: panel;
+
+.@{panel}{
+	background:@color-light;
+	margin-bottom:@gutter;
+	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.06);
+	//box-shadow: 0 5px 20px rgba(26,26,26,.1);
+	.mixin-border-radius();
+	
+	a{
+		text-decoration:none;
+	}
+	
+	.@{panel}-title{
+		padding:@gutter*2 0;
+		color:@color-blue;
+		border-bottom:lighten(@color-border,2%) solid 1px;
+
+		
+		.icon{
+			margin-left:@gutter*4;
+			margin-right:@gutter*2;
+		}
+		
+		.more{
+			
+			font-size:@font-size-min;
+			margin-right:@gutter*4;
+			float:right;
+
+			color:@color-gray;
+			
+			.icon{
+				margin-right:@gutter;
+				margin-left:0;
+			}
+
+			&:hover{
+				color:@color-gray-hover;
+			}
+		}
+	}
+	
+	.@{panel}-main{
+		min-height:200px;
+		padding:0 @gutter*4;
+		font-size:@font-size-mid;
+		
+		ul{
+			li{
+				border-bottom:lighten(@color-border,4%) solid 1px;
+				padding:@gutter*4 0;
+				
+				&:last-child{
+					border-bottom:none;
+				}
+			}
+		}
+		a{
+			color:#333;
+		}
+	}
+}

@@ -1,0 +1,102 @@
+
+@keyframes superScaleIn {
+  from {
+    transform: scale(1.3);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes customScaleIn {
+  from {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes customScaleOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes slideDownIn {
+  from {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUpOut {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+}
+
+
+//animate
+//消息中心 操作面板过渡
+.action-show-enter-active,.comment-show-enter-active {
+  transition: all .5s ease;
+}
+.action-show-enter /* .fade-leave-active below version 2.1.8 */ {
+  opacity: .4;
+  transform: translateY(-.4rem);
+}
+.comment-show-enter{
+  transform: translateY(2.4rem);
+}
+//发布评级成功弹框
+.tips-enter-active,.tips-leave-active{
+  transition: all .3s ease;
+}
+.tips-enter{
+  transform:scale(0)
+}
+.tips-leave-to{
+  transform:scale(0)
+}
+//匿实名选择器
+.anonymous-enter-active,.anonymous-leave-active{
+  transition: all .5s ease;
+}
+.anonymous-enter{
+  opacity: .4;
+  transform: translateY(.4rem);
+}
+.anonymous-leave-to{
+  opacity: 0;
+  transform: translateY(.4rem);
+}

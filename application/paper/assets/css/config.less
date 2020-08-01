@@ -1,0 +1,63 @@
+
+@hosturl : 'https://heizuan.oss-cn-shenzhen.aliyuncs.com/paper';
+// 间距 (全站的外边距和内边距都基于此值)
+@font-size-default:20px;
+
+@gutter:.75rem;
+@content-height:e("calc(100vh - 2.5rem)");
+
+// 背景色
+@bgcolor-body:#efeff4;
+@bgcolor-item:#fff;
+@bgcolor-nav:#f7f7f7;
+//背景默认颜色
+@bgcolor-default:#101723;
+
+// 字体基色
+@color-basics:#fff;
+@color-link:#5682FF;
+
+// 标题
+@color-title:#222;
+//次级标题
+@color-sub:#333;
+// 内容
+@color-content:#555;
+// lable
+@color-dec:#888;
+// placeholder
+@color-placeholder:#ccc;
+// 积分
+@color-num:#FFB188;
+
+
+
+
+// 边线色
+@color-border-main:#d6d6db;
+// 列表边线
+@color-border-item:#e6e6eb;
+
+//极细字体
+@font-weight-medium:100;
+//常规字体
+@font-weight-normal:normal;
+//粗体字体
+@font-weight-bold:bold;
+
+// 过渡动画
+.mixin-ease-in-out(){
+	transition:All 0.2s ease-in-out;
+};
+
+// 透明度
+.mixin-opacity(@v){
+	@var : @v*100;
+	filter:~"alpha(opacity=@{var})";
+	-ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{var})";
+	opacity:@v;
+};
+
+.mixin-round(@v:0) when (ispercentage(@v)){
+	border-radius:@v;
+};

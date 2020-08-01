@@ -1,0 +1,205 @@
+@import "../../assets/css/config";
+.comp-project-list{
+	font-size: 0.75rem;
+  	position: relative;
+  	width: 100%;
+  	max-width: 768px;
+	height: auto !important;
+	min-height: e("calc(100vh - 5rem)");
+	// padding-top: 4.5rem;
+
+	&.hastool{
+		top:4.5rem;
+		padding-top:0;
+	}
+	
+  	.starting{
+  		margin: 0.75rem;
+  		box-shadow:0px 0.1rem 0.3rem 0px rgba(235,235,235,1);
+		border-radius:0.2rem;
+  		img.extra{
+  			display: block;
+  			width: 100%;
+  			height: 3.575rem;
+  		}
+  		ul{
+  			padding: 0.4rem 0.8rem;
+		  	li{
+		  		display: flex;
+		  		justify-content: space-between;
+		  		align-items: center;
+		  		padding: 0.4rem 0;
+		  		.extra-info{
+		  			display: flex;
+		  			align-items: center;
+		  			//padding: 0.4rem 0.8rem 0.7rem;
+		  			img{
+		  				display: block;
+		  				width: 1.5rem;
+		  				height: 1.5rem;
+		  			}
+		  			.name{
+		  				margin-left: 0.8rem;
+			  			.main{
+			  				font-size: 0.8rem;
+			  				color: #000;
+			  			}
+			  			.desc{
+			  				font-size: 0.6rem;
+			  				color: #888;
+			  			}
+			  		}
+		  		}
+		  		.timer{
+		  			display: flex;
+		  			justify-content: space-between;
+		  			align-items: center;
+		  			padding: 0 0.4rem;
+		  			font-size: 0.6rem;
+		  			border-radius: 0.5rem;
+		  			color: #FFA678;
+		  			background:rgba(255,166,120,0.142);
+		  			i{
+		  				margin-right: 0.2rem;
+		  			}
+		  		}
+		  		&:last-child{
+		  			border-bottom: 0;
+		  		}
+		  	}
+		}
+  	}
+	.title-bar{
+		display: flex;
+		height: 2.1rem;
+		padding:0 .75rem;
+		align-items: center;
+		justify-content: space-between;
+		background: @bgcolor-body;
+		font-size: .65rem;
+		color:@color-dec;
+		.name{
+			width: 6.8rem;
+		}
+		.price{
+			flex:1;
+			margin-left:.7rem;
+		}
+		.score{
+			width: 4rem;
+			text-align: right;
+		}
+	}
+	.groupAlp{
+		color: @color-dec;
+		font-size: 0.5rem;
+		line-height: 1.1rem;
+		background-color: @bgcolor-body;
+		padding: 0 0.75rem;
+	}
+	ul{
+		li{
+			border-bottom: 0.025rem solid @color-border-item;
+			.info{
+				display: flex;
+				height: 3.65rem;
+				align-items: center;
+				h3{
+					color: @color-title;
+					font-size: 0.8rem;
+				}
+				p{
+					font-size: .6rem;
+					&.up{
+						color:#FF7270;
+					}
+					&.down{
+						color:#33CF7E;
+					}
+				}
+				.ranking {
+					width: 1rem;
+					height: 1rem;
+					line-height: 1rem;
+					overflow: hidden;
+					font-size: .7rem;
+					color: rgba(102, 102, 102, 1);
+					border-radius: 50%;
+					text-align: center;
+					margin-right: .5rem;
+					&.one,&.two,&.three {
+						color: white;
+					}
+					&.one {
+						background: linear-gradient(135deg,rgba(255,246,152,1) 0%,rgba(242,178,74,1) 100%);
+					}
+					&.two {
+						background: linear-gradient(149deg,rgba(232,232,232,1) 0%,rgba(173,173,173,1) 100%);
+					}
+					&.three {
+						background: linear-gradient(142deg,rgba(247,235,217,1) 0%,rgba(214,178,132,1) 100%);
+					}
+				}
+				.projectlog{
+					display: flex;
+					width: 6.8rem;
+					align-items: center;
+					img{
+						width: 1.5rem;
+						height: 1.5rem;
+					}
+					.name{
+						margin-left: .75rem;
+						.nowrap;
+					}
+				}
+				
+				.price,.hot{
+					flex:1;
+					min-width: 3.0rem;
+					margin-left:.7rem;
+				}
+				.hot{
+					font-size: .8rem;
+					.icon{
+						font-size: 1rem;
+					}
+					&.high{
+						color:#F86563;
+					}
+					&.mid{
+						color:#FFAA5C;
+					}
+					&.low{
+						color:#88C377;
+					}
+				}
+				.score{
+					flex:1;
+					text-align: right;
+					h3{
+						color: @color-num;
+						font-weight: @font-weight-bold;
+					}
+				}
+				.enter{
+					flex: 1;
+					text-align: right;
+					font-size: .65rem;
+					&.active {
+						color: @color-link;
+					}
+				}
+			}
+		}
+	}
+	
+	.nowrap{
+		 white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+	}
+	div{
+		-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	}
+}

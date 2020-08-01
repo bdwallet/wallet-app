@@ -1,0 +1,48 @@
+@import '../../../../assets/css/config.less';
+
+.announce-main {
+    .wrap {
+        background-color: @bgcolor-item;
+        padding: .75rem;
+        margin-top: .25rem;
+    }
+    
+    .housed {
+        margin-top: 0;
+        padding: .6rem .75rem;
+        .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: @color-sub;
+            font-size: .7rem;
+            .right, .icon {
+                font-size: .6rem;
+                color: @color-dec;
+
+            }
+            .icon {
+                margin-left: .45rem;
+            }
+        }
+        .ul-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: .9rem;
+            .list {
+                width: 2.4rem;
+                height: 2.4rem;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .announce-wrap {
+        margin-top: .3rem;
+        .comp-userbox{
+            position:sticky;
+        }
+    }
+}

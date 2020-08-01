@@ -1,0 +1,224 @@
+@import "../../assets/css/config";
+.comp-ver-code{
+    height: 100%;
+    .input-box {
+        position: relative;
+        height: 2.5rem;
+        width: 85%;
+        display: flex;
+        margin: 0 auto;
+        box-sizing: border-box;
+        overflow: hidden;
+        input {
+            position: absolute;
+            top: -200%;
+            /*---IOS 隐藏input 光标 start---*/
+            margin-left: -100%;
+            text-indent: -999rem;
+            opacity: 0;
+            /*---IOS 隐藏input 光标 end---*/
+            vertical-align: middle;
+            caret-color: transparent;
+        }
+        & + .input-box {
+            margin-top: 20px;
+        }
+        // 六个span时的样式
+        .simple-input-content {
+            height: 100%;
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            span {
+                vertical-align: middle;
+                border-bottom: .1rem solid silver;
+                display: inline-block;
+                line-height: 2.5rem;
+                text-align: center;
+                background: white;
+                width: 16%;
+                font-size: 1.5rem;
+                height: 2.5rem;
+                &.highlight {
+                    border-bottom-color: #5682FF
+                }
+            }
+
+        }
+        /* 去掉input[type=number]浏览器默认的icon显示 */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button { // chrome
+            -webkit-appearance: none;
+            appearance: none;
+            margin: 0;
+        }
+        input{ // 火狐
+            -moz-appearance:textfield;
+        }
+    }
+}
+.comp-ver-code6{
+    .input-box{
+        width: auto;
+        .simple-input-content{
+            span{
+                border: .05rem solid #ccc;
+                border-left: 0;
+                font-weight: bold;
+                font-size: .5rem;
+                color: #333;
+                width: calc(100% / 6);
+                &.highlight {
+                    border-bottom-color: #ccc
+                }
+                &:first-child{
+                    border-left: .05rem solid #ccc;
+                }
+            }
+        }
+    }
+}
+.comp-input{
+    .input-item{
+        position: relative;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        border-bottom: .03rem solid #E6E6EB;
+        input{
+            display: flex;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            border:none;
+            font-size: .75rem;
+            color:@color-sub;
+            -webkit-user-select: auto;
+            &::-webkit-input-placeholder{
+                color: #BCBCBC;
+            }
+            &::-moz-placeholder{
+                color: #BCBCBC;
+            }
+
+        }
+        .icon{
+            display: inline-block;
+            margin-right: .3rem;
+            font-size: .8rem;
+            color:#888;
+        }
+        .active-eye{
+            color: #5682FF;
+        }
+        &.input-type{
+            background: white;
+        }
+        &.input-active{
+            border-bottom: .1rem solid #5682FF;
+        }
+        &.input-error{
+            border-bottom: .1rem solid #FF7270;
+            input{
+                color:#FF7270;
+            }
+        }
+    }
+    .pink-bg-input{
+        // 邀请注册页输入框样式
+        border: none;
+        background-color: #FFEFED;
+        input{
+            background-color: #FFEFED;
+            padding: 0 .925rem;
+            font-size: .7rem;
+            border-radius: .175rem;
+        }
+        &.input-active{
+            border: none;
+            background-color: #FFEFED;
+        }
+    }
+    
+    .white-no-bg{
+        input{
+            background-color: white;
+        }
+    }
+
+    .input-button{
+        display: flex;
+        overflow: hidden;
+        background: #DDDFE3;
+        border-radius: .25rem;
+        align-items: center;
+        justify-content: center;
+        border:none;
+        color: white;
+        font-size: .8rem !important;
+        &.input-button-active{
+            background: #5682FF;
+        }
+        &.no-border-redius{
+            border-radius: 0;
+        }
+        &.bg-btn-1{
+            background: rgba(209, 173, 111, 1);
+            span{
+                color: rgba(255, 255, 255, 1);
+            }
+        }
+        &.bg-btn-2{
+            background: rgba(209, 173, 111, 1);
+            span{
+                color: rgba(0, 0, 0, 0.2);
+            }
+        }
+        .input-icon{
+            font-size: .8rem;
+            color:white;
+        }
+        span{
+            font-size: .8rem;
+        }
+    }
+    .pink-bg-btn{
+        background-color: #FFEFED;
+        border-radius: .175rem;
+        span{
+            font-size: .7rem;
+            color: #BCBCBC;
+            white-space: nowrap;
+            margin: 1.25rem;
+        }
+        &.input-button-active{
+            background: #FFEFED;
+            span{
+                color: #333;
+            }
+        }
+    }
+}
+.comp-input-avatar{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    img{
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    .sub-title{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background:rgba(0,0,0,0.5);
+        height: 1.6rem;
+        line-height: 1.6rem;
+        text-align: center;
+        font-size: .7rem;
+        color: rgba(255,255,255,1);
+    }
+}

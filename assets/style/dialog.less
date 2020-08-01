@@ -1,0 +1,42 @@
+.dialog{
+	width:500px;
+	height:300px;
+	position:fixed;
+	left:50%;
+	top:50%;
+	z-index:1002;
+
+	.close{
+		position:absolute;
+		right:@gutter/2;
+		top:@gutter/2;
+		cursor:pointer;
+		.mixin-ease-in-out();
+		
+		&:hover{
+			color:@color-red;
+			.mixin-ease-in-out();
+			
+		}
+	}
+	
+	.dialog-main{
+		padding:@gutter*2;
+	}
+}
+.dialog-mask{
+	width:100%;
+	height:100%;
+	position:fixed;
+	left:0;
+	top:0;
+	background:rgba(0,0,0,0.5);
+	z-index:1001;
+	.mixin-ease-in-out();
+}
+
+.firm{
+	.firm-btn{
+		margin-top:@gutter;
+	}
+}

@@ -1,0 +1,81 @@
+
+// 定义类名
+@grid: grid;
+@row: row;
+@col: column;
+
+
+.clear-mixin() {
+	&:before,&:after{
+		display:table;
+		content:""
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+// 构建容器
+.@{grid} {
+	margin-left: auto;
+	margin-right: auto;
+	.clear-mixin();
+}
+
+
+// 构建行
+.@{row}{
+	margin-right: - @gutter;
+	margin-left: - @gutter;
+	.clear-mixin() 
+}
+
+// 构建列
+.@{col}{
+	float:left;
+	padding-right: @gutter;
+	padding-left: @gutter;
+}
+
+
+// 构建列
+.make-cols(@n; @i:1; @fix:~"") when (@i =< @n) {
+	
+	.@{col}@{fix}-@{i} {
+		@width:(@i * 100% / @n);
+
+		& when (@fix = -offset) {
+			margin-left: @width;
+		}
+	
+		& when not (@fix = -offset) {
+			width:@width;
+		}
+	}
+	.make-cols(@n, (@i + 1), @fix);
+};
+
+// 大屏幕
+.make-cols(@grid-cols);
+.max-hide{
+	display:none;
+}
+
+// 列偏移
+.make-cols(@grid-cols, 1, -offset);
+
+// 中等屏幕
+@media (max-width: @width-screen-mid) {
+	.make-cols(@grid-cols, 1, -mid);
+	.mid-hide{
+		display:none;
+	}
+};
+
+// 小屏幕
+@media (max-width: @width-screen-min) {
+	.make-cols(@grid-cols, 1, -min);
+	.min-hide{
+		display:none;
+	}
+};

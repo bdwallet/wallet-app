@@ -1,0 +1,90 @@
+
+@hosturl : 'https://heizuan.oss-cn-shenzhen.aliyuncs.com/h5images/';
+@hosturl2 : 'https://heizuan.oss-cn-shenzhen.aliyuncs.com/web/';
+// 间距 (全站的外边距和内边距都基于此值)
+@font-size-default:20px;
+
+@gutter:.75rem;
+@tab-height:2.45rem;
+@content-height:e("calc(100vh - @{tab-height})");
+
+// 背景色
+@bgcolor-body:#FAFBFC;
+@bgcolor-item:#FFF;
+@bgcolor-nav:#F7F7F7;
+//背景默认颜色
+@bgcolor-default:#101723;
+
+// 字体基色
+@color-basics:#FFF;
+
+//次级标题
+@color-sub:#333;
+
+// 标题
+@color-title:#222;
+// 内容
+@color-content:#333;
+// lable
+@color-dec:#999;
+// 时间
+@color-time:#BBB;
+// placeholder
+@color-placeholder:#CCC;
+// 积分
+@color-num:#FFB188;
+@color-link:#5682FF;
+@color-attention:#FF7270;
+
+// 边线色
+@color-border:#F3F3F3;
+@color-border-main:#F3F3F3;//#d6d6db;
+// 列表边线
+@color-border-item:#F3F3F3;//#e6e6eb;
+
+//极细字体
+@font-weight-medium:100;
+//常规字体
+@font-weight-normal:normal; //400
+//粗体字体
+@font-weight-bold:bold; //700
+
+// 过渡动画
+.mixin-ease-in-out(){
+	transition:All 0.2s ease-in-out;
+};
+
+// 透明度
+.mixin-opacity(@v){
+	@var : @v*100;
+	filter:~"alpha(opacity=@{var})";
+	-ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{var})";
+	opacity:@v;
+};
+
+.mixin-round(@v:0) when (ispercentage(@v)){
+	border-radius:@v;
+};
+
+//任务中心-精灵图
+.sprites-task-get(@w:2rem,@h:2rem,@x:0,@y:0,@size:18rem){
+	display: block;
+	width: @w;
+	height: @h;
+	background-image: url('@{hosturl}sprites-new.png');
+	background-size: @size 0.11*@size;
+	background-position: -@x -@y;
+	background-repeat: no-repeat;
+}
+
+//任务中心-精灵图
+.sprites-tab-get(@w:2rem,@h:2rem,@x:0,@y:0){
+	display: block;
+	width: @w;
+	height: @h;
+	background-image: url('@{hosturl}sprites-tab2.png');
+	background-size: 8.5rem;
+	background-position: -@x -@y;
+	background-repeat: no-repeat;
+	transition: all .2s;
+}

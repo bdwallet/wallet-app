@@ -1,0 +1,746 @@
+@import "../../../../../assets/css/config";
+.redpack{
+	min-height: 100vh;
+	.common-header{
+		position: relative;
+		width: 100%;
+		.background{
+			img{
+				display: block;
+				width: 100%;
+				height: auto;
+			}
+		}
+		.rule-btn{
+			position: absolute;
+			top: 0.55rem;
+			right: 0.55rem;
+			display: flex;
+			padding: 0.15rem 0.25rem;
+			background-color: rgba(0,0,0,.65);
+			border-radius: 0.45rem;
+			font-size: 0.4rem;
+			color: #fff;
+		}
+	}
+	.redpack-main{
+		position: relative;
+		min-height: e('calc(100vh - 9.5rem)');
+		padding: 0 .75rem .4rem;
+		.advspace{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 1.375rem;
+			line-height: 1;
+			margin: 0 -0.75rem;
+			font-size: 0.5rem;
+			color: #FDF1E3;
+			background:rgba(0,0,0,0.2);
+			div{
+				margin-right: 0.45rem;
+				&:last-child{
+					margin-right:0;
+				}
+			}
+			.txt{
+				margin-right: 0;
+			}
+		}
+		.time{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 2.0rem;
+			padding:.5rem 0;
+			text-align: center;
+			text-shadow:0 .05rem .1rem #390401;
+			font-weight:500;
+			font-size: .5rem;
+			color:#FDF1E3;
+			&.time-share{
+			  position: absolute;
+		    padding: 0;
+		    right: 0;
+		    height: 1rem;
+		    top: -1.0rem;
+		    z-index: 1;
+		    right: 0.25rem;
+			}
+		}
+		
+		.redpack-activity{
+			overflow: hidden;
+			.mycards{
+				display: flex;
+				width: 100%;
+				padding:1rem 0;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				.cards-box{
+					display: flex;
+					margin:.8rem 0 0 .3rem;
+					.card{
+						position: relative;
+						margin-left:-.3rem;
+						transform: scale(.9);
+						//animation: swing 2s ease 0s infinite;
+						.num{
+							position: absolute;
+							top:.3rem;
+							right:.5rem;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							width: .85rem;
+							height: .85rem;
+							background:#FFC462;
+							border-radius: 50%;
+							box-shadow:0px .05rem .05rem 0px rgba(0,0,0,0.5);
+							line-height: 1;
+							font-size: .6rem;
+							color:#99211B;
+						}
+					}
+				}
+				.chance{
+					margin-top:.5rem;
+					font-size: .6rem;
+					font-weight: bold;
+					color:#333;
+				}
+				.getbtn{
+					display: flex;
+					margin-top:.5rem;
+					justify-content: center;
+					align-items: center;
+					font-size: .7rem;
+					&.sprites-activity-btn1{
+						color:#FAD393;
+					}
+					&.sprites-gray-btn{
+						color:#B1B1B1;
+					}
+				}
+				.tr{
+					top:1.6rem !important;
+				}
+			}
+			
+
+		}
+		.strategy{
+				display: flex;
+				width: 100%;
+				margin-top:.8rem;
+				padding:1rem 0;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				.pro-title{
+					display: flex;
+					align-items: center;
+					margin-top: 0.8rem;
+					.left-icon,.right-icon{
+						width:0.2rem;
+						height:0.85rem;
+						background:linear-gradient(180deg,rgba(248,142,126,1) 0%,rgba(204,53,40,1) 100%);
+						border-radius:0.1rem;
+					}
+					.center{
+						margin: 0 0.4rem;
+						font-size: 0.7rem;
+						color: #CC3528;
+					}
+				}
+				.pros-box{
+					position: relative;
+    			z-index: 2;
+					width: 100%;
+					padding: 0 .75rem;
+					.pro{
+						display: flex;
+						margin-top:.7rem;
+						align-items: center;
+						.pro-icon{
+							flex-shrink:0;
+						}
+						.pro-txt{
+							margin: 0 0 0 .6rem;
+							flex-grow:1;
+							font-size: 0.6rem;
+							color:#333;
+						}
+						.pro-btn{
+							flex-shrink:0;
+							padding:.3rem .7rem;
+							border-radius: .7rem;
+							line-height: 1;
+							font-size: .5rem;
+							background: #99211B;
+							color:#fff;
+							&.ok{
+								background: none;
+								border:1px solid #B8A096;
+								color:#B8A096;
+							}
+						}
+					}
+				}
+			}
+		.redpack-share{
+			padding: 0.75rem 0.6rem 0.9rem;
+			font-size: 0.8rem;
+			color: #99211B;
+			.mycards{
+				min-height: 9rem;
+				.info{
+					position: relative;
+					top: -0.55rem;
+					text-align: center;
+					.user-photo{
+						position: relative;
+						width: 3.5rem;
+						height: 3.5rem;
+						padding: 0.15rem;
+						border-radius: 50%;
+						margin:0 auto;
+						background-color: #fff;
+						img{
+							display: block;
+							width: 100%;
+							height: 100%;
+							border-radius: 50%;
+						}
+					}
+					.user-name{
+						margin-top: 0.25rem;
+						font-size: 0.9rem;
+						line-height: 1.25rem;
+						font-weight: 600;
+					}
+					p{
+						margin-top: 0.2rem;
+						font-size: 0.6rem;
+						font-weight: 600;
+					}
+					.sprites-award-bg{
+						margin: 0.3rem auto 0;
+						font-size: 1.35rem;
+						line-height: 5.5rem;
+					}
+					.code{
+						display: flex;
+						margin-top: 1.3rem;
+						padding: 0 1.25rem 0.5rem;
+						img{
+							width: 2.25rem;
+							height: 2.25rem;
+						}
+						div{
+							display: flex;
+					    justify-content: space-between;
+					    flex-direction: column;
+							text-align: left;
+							margin-left: 0.6rem;
+							p{
+								margin: 0;
+								line-height: 1.05rem;
+								&:first-child{
+									color:#B23A38;
+								}
+							}
+						}
+					}
+				}
+			}
+			.sprites-yellow-bgbtn{
+				margin: 0.775rem -0.6rem 0;
+				text-align: center;
+				line-height: 2.25rem;
+			}
+		}
+		.redpack-actend{
+			font-size: 0.8rem;
+			color: #99211B;
+			.sprites-actend-img1{
+				margin: 0.5rem auto 0;
+			}
+			.sprites-yellow-bgbtn{
+				position: absolute;
+				bottom: 1.3rem;
+				line-height: 2.25rem;
+				text-align: center;
+			}
+		}
+		.redpack-awardloss{
+			padding: 0.75rem 0 0.9rem;
+			font-size: 0.8rem;
+			color: #99211B;
+			.mycards{
+				min-height: 13.5rem;
+				overflow: hidden;
+				background-size: 100% 100%;
+				.tl{
+					display: none;
+					/* top: 3.05rem;
+					.sprites-frame-bg1{
+						display: none;
+					} */
+				}
+				.sprites-frame-bg2{
+					display: none;
+				}
+				.sprites-frame-bg5,.sprites-frame-bg6{
+					display: none;
+				}
+				.atten{
+					width: 11.875rem;
+					padding: 0.25rem 0.3rem;
+					margin: 2.25rem auto 0;
+					font-size: 0.7rem;
+					text-align: center;
+					color: #fff;
+					background-color: #E37D6E;
+				}
+				.imgcode{
+					display: block;
+			    width: 5.725rem;
+			    height: 5.725rem;
+			    margin: 1.0rem auto;
+				}
+			}
+			.sprites-yellow-bgbtn{
+			  margin: 0.75rem 0;
+				line-height: 2.25rem;
+				text-align: center;
+			}
+		}
+		.redpack-awardgot{
+			font-size: 0.8rem;
+			color: #99211B;
+			.award{
+				min-height: 13.5rem;
+				overflow: hidden;
+				text-align: center;
+				.tl{
+					top: 0.5rem;
+					left: 0;
+					.sprites-frame-bg4{
+						margin-top: 3.0rem;
+					}
+					.sprites-frame-bg3{
+						display: none;
+					}
+					.sprites-frame-bg1{
+						margin-left: -1.6rem;
+					}
+				}
+				.sprites-frame-bg2{
+						top: 1.35rem;
+						transform: rotateZ(180deg) rotateY(180deg);
+				}
+				.sprites-activity-txt4{
+					margin: 0.6rem auto;
+				}
+				.sprites-award-bg{
+					margin: 0.3rem auto 0;
+			    font-size: 1.35rem;
+			    line-height: 5.5rem;
+				}
+				.redemptioncode{
+					align-items: center;
+					justify-content: center;
+					div{
+						padding: 0 0.5rem;
+					}
+				}
+				.coderule{
+					padding: 0.4rem 0.6rem 1.25rem;
+					color: #D78682;
+					font-size: 0.65rem;
+					text-align: justify;
+				}
+			}
+			.mycards{
+				min-height:8.1rem;
+				margin-top: 0.75rem;
+				overflow: hidden;
+				text-align: center;
+				.atten{
+					display: inline-block;
+					height: 1.25rem;
+					padding: 0 0.4rem;
+					margin: 0 auto;
+					line-height: 1.25rem;
+					font-size: 0.7rem;
+					text-align: center;
+					border-radius: 0.6rem;
+					color: #fff;
+					background-color: #F2B59B;
+				}
+				.tl{
+					display: none;
+				}
+				.sprites-frame-bg2{
+					display: none;
+				}
+				.sprites-activity-txt3{
+					margin: 0.6rem 0;
+				}
+				.cardlist{
+					display: flex;
+					margin-top: 0.9rem;
+					padding-left: 0.15rem;
+				}
+			}
+		}
+		.redpack-eostask{
+			padding-top: 0.75rem;
+			padding-bottom: 0.35rem;
+			font-size: 0.8rem;
+			color: #99211B;
+			.sprites-pjlogo-eosbg2{
+				position: absolute;
+				bottom: 0!important;
+				left: 0;
+			}
+			.sprites-pjlogo-eosbg{
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+			.sprites-home-btn1{
+				position: absolute;
+				right: 0;
+				bottom: 0.5rem;
+				z-index: 3;
+			}
+			.header-title{
+				margin-top: 0.6rem;
+				font-weight: bold;
+				font-size: 0.6rem;
+			}
+			.eostask{
+				min-height: e('calc(100vh - 1.5rem)');
+				overflow: hidden;
+				text-align: center;
+				.sprites-frame-bg6,.sprites-frame-bg5{
+					display: none;
+				}
+				.sprites-pjlogo-eosbg1{
+					position: absolute;
+					bottom: 1.5rem;
+					right: 0;
+				}
+				.eos-header{
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					margin-top: 2.0rem;
+					.mul{
+						font-size: 1.2rem;
+						margin: 0 1.8rem;
+					}
+				}
+				.sprites-pjlogo-eosbg7{
+					margin: 1.25rem auto 0;
+				}
+			}
+			.bgbox{
+				position: absolute;
+		    bottom: -0.4rem;
+				width: 18.75rem;
+    		height: 8.4rem;
+		    margin: 0 -0.75rem;
+    		overflow: hidden;
+				.sprites-pjlogo-eosbg{
+					  
+				}
+			}
+			
+			.content{
+				margin-top: 1.5rem;
+				padding: 0 0.75rem 7.2rem;
+				ul{
+					li{
+						text-align: left;
+						.title{
+							position: relative;
+							padding-left: 0.7rem;
+							font-size: 0.75rem;
+							color: #333;
+							&:before{
+								content:'';
+								position: absolute;
+								left: 0;
+								top: 0.45rem;
+								width: 0.3rem;
+								height: 0.3rem;
+								background-color: #CC3528;
+								border-radius: 50%;
+							}
+						}
+						p{
+							margin: 0.3rem 0 0.6rem;
+							font-size: 0.6rem;
+							color: #666;
+							i{
+								margin-right: 0.25rem;
+								color: #D78682;
+								font-size: 0.6rem;
+							}
+						}
+						.form{
+							display: flex;
+							input{
+								width: 12.0rem;
+								height: 1.8rem;
+								font-size: 0.7rem;
+								-webkit-appearance: none; 
+								padding-left: 0.4rem;
+								border: 1px solid #CC3528;
+								border-radius: 0.1rem;
+								background-color: #FFE9E0;
+								&::placeholder{
+									color:#D78682;	
+								}
+							}
+							.checkbtn{
+								width: 3.55rem;
+								height: 1.8rem;
+								margin-left: 0.4rem;
+								line-height: 1.8rem;
+								text-align: center;
+								font-size: 0.65rem;
+								color: #fff;
+								border-radius: 0.1rem;
+								background-color: #CC3528;
+							}
+							
+						}
+						.downbtn{
+								width: 15.75rem;
+								height: 2.0rem;
+								line-height: 2.0rem;
+								color: #fff;
+								text-align: center;
+								background-color: #CC3528;
+							}
+						&:nth-child(n+1){
+							margin-top: 2.0rem;
+							p{
+								margin-top: 0.55rem;
+							}
+						}
+					}
+				}
+			}
+		}
+		.redpack-puretask{
+			//margin: 1.25rem auto 0;
+			.content{
+				padding-bottom: 0.6rem;
+			}
+			.attentxt{
+				padding-bottom: 0.6rem;
+				font-size: 0.6rem;
+				text-align: center;
+				color: #D78682;
+			}
+			.eos-header{
+				margin-top: 0.25rem !important;
+			}
+			/* .sprites-pjlogo-eosbg{
+			  position: fixed;
+					    bottom: 0;
+					    left: 0;
+					    z-index: 2;
+			} */
+			.sprites-home-btn2{
+				position: absolute;
+				right: 0;
+				bottom: 1.0rem;
+			}
+			.hzpjcode{
+				width: 5.6rem;
+				height: 5.6rem;
+				margin: 1.3rem auto 0;
+			}
+			.sprites-pjlogo-eosbg6{
+				margin: 1.25rem auto 0;
+			}
+			.col{
+				display: flex;
+				align-items: center;
+				margin: 0.4rem 0;
+				font-size: 0.7rem;
+				color: #666666;
+			}
+			.title{
+				padding-left: 0!important;
+				&:before{
+					display:none!important;
+				}
+			}
+			.num{
+				width:0.9rem;
+				height:0.9rem;
+				display: flex;
+		    justify-content: center;
+		    align-items: center;
+				margin-right: 0.3rem;
+				border: 0.025rem solid #D78682;
+				border-radius: 50%;
+				.inner{
+					display: block;
+					font-size: 0.5rem;
+					color: #D78682;
+					width: 0.6rem;
+					height: 0.6rem;
+					line-height: 0.6rem;
+					text-align: center;
+					border-radius: 50%;
+					border: 0;
+					background-color: #CC3528;
+				}
+			}
+			
+		}
+	}
+	.home-nav{
+		display: flex;
+		height: 2.5rem;
+		margin: 1rem 0 0;
+		align-items: center;
+		justify-content: space-between;
+		.homebtn{
+			flex-shrink:0;
+		}
+		.sharebtn{
+			display: flex;
+			flex-shrink:0;
+			align-items: center;
+			justify-content: center;
+			font-size: .8rem;
+			color:#99211B;
+		}
+	}
+
+	.shard-animate-box{
+		position: fixed;
+		width: 14.7rem;
+		height: 14.75rem;
+		left:0;
+		bottom:0;
+		z-index: 99;
+		.shard-pig{
+			position: absolute;
+			bottom:0;
+			left:0;
+			display: block;
+			width: 12rem;
+			height: auto;
+			animation:shardpig .4s ease .2s 1 ;
+			animation-fill-mode:backwards;
+		}
+		.shard-text{
+			position: absolute;
+			top:2rem;
+			right:0;
+			display: block;
+			width: 4.75rem;
+			height: auto;
+			opacity: 0;
+			transform-origin: 0 100% 0;
+			animation:shardtext .2s ease .8s 1;
+			animation-fill-mode:forwards;
+		}
+	}
+
+	.collected-card-enter-active, .collected-card-leave-active {
+  	transition: all .4s ease;
+	}
+	.collected-card-enter {
+		opacity: 0;
+		transform: translateY(-3rem);
+	}
+	.collected-card-leave-to {
+		transform: scale(0);
+		opacity: 0;
+	}
+	.collected-txt-enter-active, .collected-txt-leave-active {
+  	transition: all .1s ease;
+	}
+	.collected-txt-enter,.collected-txt-leave-to {
+		opacity: 0;
+	}
+	
+	.shard-leave-active {
+  	transition: all .2s ease;
+	}
+	.shard-leave-to {
+		transform: translateY(4rem);
+		opacity: 0;
+	}
+
+	@keyframes swing {
+		0% {
+			transform: scale(.9);
+		}
+		5%{
+			transform: scale(1.1);
+		}
+		10% {
+			transform: rotate(15deg) scale(1.1);
+		}
+		20% {
+			transform: rotate(-10deg) scale(1.1);
+		}
+		30% {
+			transform: rotate(15deg) scale(1.1);
+		}
+		40% {
+			transform: rotate(-10deg) scale(1.1);
+		}
+		50% {
+			transform: rotate(5deg) scale(1.1);
+		}
+		60% {
+			transform: rotate(-5deg) scale(1.1);
+		}
+		70%,100% {
+			transform: rotate(0deg) scale(.9);
+		}
+	}
+	@keyframes swing2 {
+		0%{
+			transform: rotate(-15deg) scale(1.1);
+		}
+		50% {
+			transform: rotate(15deg) scale(1.1);
+		}
+		100% {
+			transform: rotate(-15deg) scale(1.1);
+		}
+	}
+	@keyframes shardpig {
+		0%{
+			transform: translateX(-9rem) translateY(9rem);
+		}
+		100% {
+			transform: translateX(0) translateY(0);
+		}
+	}
+	@keyframes shardtext {
+		10%{
+			opacity: 1;
+			transform: scale(0);
+		}
+		100% {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+}

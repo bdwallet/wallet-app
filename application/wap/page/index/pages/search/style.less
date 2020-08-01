@@ -1,0 +1,68 @@
+@import "../../../../assets/css/config";
+.search-page{
+	position: relative;
+	min-height: e("calc(100vh - 2.5rem)");
+	font-size: 0.75rem;
+	background-color: @bgcolor-item;
+	padding-top: 2.5rem;
+	.comp-project-list{
+		padding-top:0;
+	}
+	.hotitem,.history{
+	  //position: absolute;
+	  width: 100%;
+		background-color: @bgcolor-item;
+		.title{
+			display: flex;
+			height: 2.2rem;
+			align-items: center;
+			justify-content: space-between;
+			color: @color-dec;
+			.icon{
+				font-size: .6rem;
+				color:#BCBCBC;
+			}
+		}
+		ul{
+			display: flex;
+			flex-wrap: wrap;
+			li{
+				padding: .35rem .75rem;
+				margin: 0 .4rem .4rem 0;
+				background: @bgcolor-body;
+				border-radius:.15rem;
+				line-height: 1;
+				font-size: .7rem;
+				color: @color-sub;
+			}
+		}
+	}
+	.history{
+		padding-bottom: 2.5rem;
+	}
+	.search-empty{
+		display: flex;
+    	flex-direction: column;
+    	align-items: center;
+		img{
+			width: 3rem;
+			height: 3.65rem;
+		}
+		.tip{
+			margin: 1.5rem 0 1.15rem;
+			text-align: center;
+			font-size: 0.75rem;
+			line-height: 1;
+		}
+		.sub{
+			display: flex;
+			width: 8.25rem;
+			height: 2rem;
+			justify-content: center;
+			align-items: center;
+			border-radius: 0.25rem;
+			color: #FFFFFF;
+			background-color: #5682FF;
+		}
+	}
+}

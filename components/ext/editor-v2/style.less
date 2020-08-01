@@ -1,0 +1,100 @@
+	[contenteditable=true]:empty:before {
+		content: attr(placeholder);
+		color: #999;
+		cursor: text;
+		display: block;
+	}
+	.editor {	
+		background: #fff;
+		border: 1px solid rgba(10, 10, 10, 0.1);
+		overflow: hidden;
+
+		&.disabled{
+			cursor: not-allowed;
+
+			.button{
+				cursor: not-allowed;
+			}
+			.content{
+				cursor: not-allowed;
+			}
+		}
+
+		.content {
+			box-sizing: border-box;
+			height: auto;
+			min-height: 400px;
+			outline: 0;
+			overflow-y: auto;
+			line-height: 1.5;
+			cursor: text;
+		  margin: 20px 0px;
+			padding: 0 10px;
+			width: 100%;
+			mark{
+				color: #ea1d38;
+				background: #fcdde1;
+			}
+		}
+
+		.actionbar {
+			height: 40px;
+			line-height: 40px;
+			border-bottom: 1px solid rgba(10, 10, 10, 0.1);
+
+			&.is-fixed{
+				background: #fff;
+				position: fixed;
+				top: 0;
+				margin: 0 auto;
+			}
+
+			.button-item{
+				float: left;
+				list-style:none;
+				position: relative;
+
+				&.current {
+					.button{
+						.editor-icon {
+							fill: #0084FF;
+						}
+					}
+				}
+
+				.button {
+					background-color: transparent;
+					border: none;
+					cursor: pointer;
+					width: 30px;
+					height: 30px;
+					outline: 0;
+					margin: 0 5px;
+					.editor-icon {
+						vertical-align: middle;
+						fill: #8590a6;
+					}
+				}
+
+				.editor-panel{
+					background: #fff;
+					position: absolute;
+					box-shadow: 0 1px 10px 0 rgba(0,0,0,.2);
+					padding: 20px;
+					text-align: left;
+					left: 0;
+					top: 40px;
+
+					.form-group{
+						margin: 10px 0 0 0 !important;
+						padding: 0 !important;
+						line-height: 1;
+						dt{
+							margin: 10px 0 !important;
+							padding: 0 !important;
+						}
+					}
+				}
+			}
+		}
+	}

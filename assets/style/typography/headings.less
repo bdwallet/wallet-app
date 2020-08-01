@@ -1,0 +1,32 @@
+
+.typography {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-bottom: @typography-margin;
+		font-weight: bold;
+		line-height: @typography-line-height;
+		
+		.octicon-link {
+			color: #000;
+			vertical-align: middle;
+			visibility: hidden;
+		}
+	
+		&:hover .anchor {
+			text-decoration: none;
+		
+			.octicon-link {
+				visibility: visible;
+			}
+		}
+
+		tt,
+		code {
+			font-size: inherit;
+		}
+	}
+}

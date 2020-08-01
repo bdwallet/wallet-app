@@ -1,0 +1,44 @@
+@import "../../../../assets/css/config";
+@tab-height:2.2rem;
+@searchtool-height:2.5rem;
+@rank-height:2rem;
+.list-page{
+	padding-top:@tab-height+@searchtool-height+@rank-height;
+	font-size: 0.65rem;
+	color: @color-dec;
+	background-color: @bgcolor-item;
+	.com-tab{
+		position: fixed !important;
+	}
+	.comp-searchtool{
+		top:@tab-height;
+	}
+	.rank{
+		position: fixed;
+		top: @tab-height+@searchtool-height;
+		z-index: 5;
+		display: flex;
+		justify-content: space-between;
+		height: 2.0rem;
+		width: 100%;
+		max-width: 768px;
+		line-height: 2.0rem;
+		font-size: 0.7rem;
+		padding: 0 0.75rem;
+		border-bottom: 0.025rem solid @color-border-main;
+		background-color: @bgcolor-item;
+		color: @color-sub;
+		.rankway{
+			display: flex;
+			span{
+				padding: 0 0.4rem;
+				&:last-child{
+					padding-right:0;
+				}
+			}
+			.current{
+				color: @color-link;
+			}
+		}
+	}
+}

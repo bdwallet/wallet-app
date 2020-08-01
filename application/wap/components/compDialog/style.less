@@ -1,0 +1,416 @@
+.comp-dialog{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 9;
+    visibility: hidden;
+    transition: all .3s;
+    transform: translate(-50%,-50%);
+    background: transparent;
+    .dialog{
+        width: 13.5rem;
+        background: #fff;
+        box-shadow:0 -0.03rem 0 0 rgba(221,221,221,1);
+        border-radius: .35rem;
+        line-height: 1.2;
+        text-align: center;
+        font-size: .9rem;
+        color: #333;
+        overflow: hidden;
+        .dialog-head {
+            padding: 1.05rem 1.05rem .75rem;
+            .title{
+                word-break:break-all;
+            }
+            .sub-title {
+                margin-top: .45rem;
+                line-height: 1.5;
+                font-size: .75rem;
+                color:#888;
+                word-break:break-all;
+                p{
+                    margin-top:.6rem;
+                    text-align: justify;
+                    font-size:.7rem;
+                    color: #333;
+                }
+                .sub-img{
+                    width: 11.4rem;
+                    margin-bottom: .45rem;
+                    height: auto;
+                    overflow: hidden;
+                    img{
+                        display: block;
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                &.center {
+                    margin-top: 0;
+                    padding-top: .6rem;
+                    p {
+                        color: #888;
+                        text-align: center;
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+        .dialog-buttons {
+            display: flex;
+            border-top:.03rem solid #ddd;
+            .button {
+                padding: .75rem .15rem;
+                flex:1;
+                color: #000;
+                transition: all .2s;
+                border-right:.03rem solid #ddd;
+                &.button-ok {
+                    color:#5682FF;
+                }
+                &:active {
+                    background-color: #ccc;
+                    color:#fff;
+                }
+                &:last-child{
+                    border:none;
+                }
+            }
+        }
+        &.success,&.warning{
+            width: 9rem;
+            .sub-title{
+                margin-top:.7rem;
+                font-size: .6rem;
+            }
+            .icon{
+                font-size: 2.45rem;
+            }
+            .icon-wancheng{
+                color:#0DBD0B;
+            }
+            .icon-gantanhao{
+                color:#F76260;
+            }
+        }
+        &.tip{
+            width: auto;
+            max-width: 12rem;
+            border-radius: 1rem;
+            .dialog-head {
+                padding:.4rem .8rem;
+                background: rgba(0,0,0,.6);
+                .sub-title{
+                    margin:0;
+                    line-height: 1;
+                    font-size: 0.7rem;
+                    color: #fff;
+                    word-break:keep-all;
+                }
+            }
+        }
+        &.pannel{
+            position: relative;
+            max-height: 80vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            .close{
+                position: absolute;
+                top:.5rem;
+                right:.5rem;
+                font-size: .5rem;
+            }
+        }
+    }
+    &.hidden{
+        visibility: visible;
+        background: transparent;
+        .dialog {
+            animation-name: scaleOut;
+            animation-duration: .1s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: both;
+        }
+    }
+    &.active{
+        visibility: visible;
+        .dialog {
+            animation-name: superScaleIn;
+            animation-duration: .3s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: both;
+        }
+    }
+}
+//禁止body的events
+// .dialog-open {
+//   pointer-events: none;
+//   .dialog {
+//     pointer-events: auto
+//   }
+// }
+
+.comp-message {
+    position: absolute;
+    top:50%;
+    left:50%;
+    z-index: 9;
+    padding: 0.25rem;
+    max-width: 8.5rem;
+    font-size: 0.5rem;
+    line-height: 0.7rem;
+    text-align: justify;
+    color: #fff;
+    background: #5682FF;
+    border-radius: 0.1rem;
+    box-shadow: 0px 0.05rem 0.1rem 0px rgba(0, 0, 0, 0.12);
+    .layer {
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: -0.3rem;
+        border-right: 0.4rem solid transparent;
+        border-left: 0.4rem solid transparent;
+        border-bottom: 0.4rem solid #5682FF;
+    }
+}
+.comp-dialog-other{
+    position: relative;
+    width: 13.0rem;
+    padding: 0.4rem 0 0.7rem;
+    background: #fff;
+    border-radius: 0.95rem;
+    .txt{
+        position: absolute;
+        top: 6.2rem;
+        width: 100%;
+        font-size: 0.8rem;
+        text-align: center;
+        color: #fff;
+        left: 0;
+    }
+    .num{
+        width: 100%;
+        font-size: 1.9rem;
+        text-align: center;
+        color: #5682FF;
+    }
+    p{
+        padding: 0 .75rem;
+        font-size: 0.65rem;
+        text-align: center;
+        color: #888;
+    }
+    .btn{
+        width: 11.0rem;
+        height: 2.1rem;
+        line-height: 2.1rem;
+        font-size: 0.8rem;
+        text-align: center;
+        background-color: #5682FF;
+        color: #fff;
+        border-radius: 0.25rem;
+        margin: 0.85rem auto 0;
+    }
+    img{
+        display: block;
+        width: 100%;
+    }
+}
+.comp-mask{
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    text-align: right !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    &.isApp{
+        top: 3.75rem !important;
+    }
+    &.isIOS{
+        top: 2.5rem !important;
+    }
+    .icon{
+        margin-top: 0.6rem;
+        margin-right: 1.125rem;
+        font-size: 2.9rem;
+        color: #fff;
+    }
+    .tip{
+        display: flex;
+        align-items: center;
+        position: relative;
+        left: 0.4rem;
+        width: 12.75rem;
+        height: 4.4rem;
+        margin: 0 auto;
+        padding: 0 0.5rem 0 0.725rem;
+        font-size: 0.75rem;
+        line-height: 1.05rem;
+        color: #fff;
+        border-radius: 0.075rem;
+        background-size: 100% 100%;
+        text-align: left;
+    }
+    .btn{
+        width: 5.8rem;
+        height: 1.75rem;
+        border-radius: .875rem;
+        border: 1px solid white;
+        line-height: 1.75rem;
+        text-align: center;
+        color: white;
+        margin: 8.5rem auto 0;
+        font-size: .6rem;
+    }
+}
+.comp-newComes{
+    position: relative;
+    width: 15.625rem !important;
+    height: 21.3rem;
+    box-shadow: none !important;
+    padding-bottom: 0;
+    border-radius: 0 !important;
+    overflow: visible !important;
+    .buttons{
+        position: absolute;
+        bottom: 3.15rem;
+        width: 12.625rem;
+        left: 50%;
+        margin-left: -6.125rem;
+        height: 3.2rem;
+    }
+    .close{
+        position: absolute;
+        bottom: -3rem;
+        right: 46%;
+        color: white;
+        z-index: 9;
+        font-size: 1.2rem;
+    }
+}
+.comp-update{
+    position: relative;
+    width: 14rem;
+    padding-bottom: .75rem;
+    box-shadow: 0px 3px 26px 3px #666;
+    overflow: visible !important;
+    .dialog-head{
+        padding: 0 !important;
+        overflow: hidden;
+        border-radius: 10px 10px 0 0;
+        position: static;
+        .title{
+            height: 6.875rem;
+            color: white;
+            .title-content{
+                width: 75%;
+                font-size: 1.2rem;
+                font-style:italic;
+                padding-top: 1.6rem;
+                color: white;
+                //安卓9 好像还不支持这个属性
+                //background: linear-gradient(to top,rgba(135,202,255,1), rgba(255,255,255,1));
+                //background: -webkit-linear-gradient(to top,rgba(135,202,255,1), rgba(255,255,255,1));
+                //-webkit-background-clip: text;
+                //-webkit-text-fill-color: transparent;
+                .titles{
+                    font-weight: bold;
+                }
+            }
+            
+        }
+        .content{
+            text-align: left;
+            padding: .7rem;
+            .texts{
+                color: #000;
+                font-size: .8rem;
+                font-weight: 500;
+            }
+            .tip{
+                color: #f00;
+                font-size: .6rem;
+                text-align: center;
+            }
+            .content{
+                p{
+                    font-size: .8rem;
+                    word-wrap:break-word;
+                    word-break:break-all;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+    .buttons{
+        width: 7rem;
+        height: auto;
+        margin: 0 auto;
+        .update{
+            width: 100%;
+            outline: none;
+            line-height: 38px;
+            min-height: 38px;
+            height: 38px;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            border-radius: 19px;
+            background: #0c9dcd;
+            background:-webkit-linear-gradient(left, #33f8dd, #33f9c8);
+        }
+    }
+    .close{
+        position: absolute;
+        bottom: -3rem;
+        right: 46%;
+        color: white;
+        z-index: 9;
+        font-size: 1.2rem;
+    }
+}
+
+.comp-loadings{
+    display: flex;
+    background: rgba(0,0,0,.5) !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto !important;
+    max-width: 13.7rem;
+    padding: .5rem .75rem;
+    color: #000 !important;
+    i.icon{
+        font-size: 2rem;
+        line-height: normal;
+        -webkit-animation: spin 1s linear infinite;
+        animation: spin 1s linear infinite;
+        margin-bottom: .4rem;
+    }
+    span.loading{
+        font-size: .75rem;
+    }
+}
+@-webkit-keyframes spin {
+    from { /*动画起始状态*/
+        -webkit-transform: rotate(0deg);
+    }
+    to { /*动画结束状态*/
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

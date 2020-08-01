@@ -1,0 +1,276 @@
+@mod-input: input;
+
+
+@{mod-input},textarea{
+    padding:@gutter;
+    color: #333;
+		font-size:@font-size-mid;
+    vertical-align: middle;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    border: 1px solid @color-border;
+    .mixin-border-radius();
+    outline: none;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+}
+
+
+@{mod-input}:focus,textarea:focus {
+  border-color: #51a7e8;
+  outline: none;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 5px rgba(81, 167, 232, 0.5);
+}
+
+
+.@{ns}@{mod-input}-contrast {
+	background-color: #fafafa;
+	&:focus {
+		background-color: #fff
+	}
+	
+}
+
+.@{ns}@{mod-input}-sm {
+	min-height: 26px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-size: 12px
+}
+
+.@{ns}@{mod-input}-lg {
+	padding: 6px 10px;
+	font-size: 16px
+}
+
+.@{ns}@{mod-input}-block {
+	display: block;
+	width: 100%
+}
+
+
+@mod-form: form;
+
+.input-upload-img{
+	display:none;
+}
+
+.form-control.focus,
+.form-control:focus,
+.form-select.focus,
+.form-select:focus {
+	border-color: @color-blue;
+	outline: none;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0.075),0 0 5px rgba(81,167,232,0.5)
+}
+
+
+.@{ns}@{mod-form}-checkbox {
+	padding-left: 20px;
+	margin: 15px 0;
+	vertical-align: middle;
+	
+	input[type=checkbox]{
+		float: left;
+		margin: 6px 0 0 -20px;
+		vertical-align: middle
+	}
+	input[type=radio]{
+		float: left;
+		margin: 2px 0 0 -20px;
+		vertical-align: middle
+	}
+	
+	.note {
+		display: block;
+		margin: 0;
+		font-size: 12px;
+		font-weight: normal;
+		color: #666;
+		
+		.icon{
+			font-size: @font-size-min;
+			color: #999;
+			margin-right:@gutter/2;
+		}
+		
+		a{
+			color:@color-blue;
+			text-decoration:underline;
+			&:hover{
+				color:darken(@color-blue,10%)
+			}
+		}
+	}
+	
+	label {
+		position: relative;
+		font-size:@font-size-mid;
+		font-weight:bold;
+	}
+
+}
+
+
+
+.@{ns}@{mod-form}-select {
+	padding:0  @gutter;
+    color: #333;
+	font-size:@font-size-mid;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    border: 1px solid @color-border;
+    .mixin-border-radius();
+    outline: none;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+	
+	display: inline-block;
+	max-width: 100%;
+
+	height: 34px;
+	background: #fff url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAMAAACzvE1FAAAADFBMVEUzMzMzMzMzMzMzMzMKAG/3AAAAA3RSTlMAf4C/aSLHAAAAPElEQVR42q3NMQ4AIAgEQTn//2cLdRKppSGzBYwzVXvznNWs8C58CiussPJj8h6NwgorrKRdTvuV9v16Afn0AYFOB7aYAAAAAElFTkSuQmCC") no-repeat right 8px center;
+	background-image: none \9;
+	background-size: 8px 10px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	
+	&::-ms-expand {
+		opacity: 0
+	}
+	
+	&[multiple]{
+		height: auto
+	}
+	
+}
+
+
+
+.select-sm {
+	height: 26px;
+	min-height: 26px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	font-size: 12px;
+	
+	[multiple] {
+		height: auto;
+		min-height: 0
+	}
+}
+
+.@{ns}@{mod-form}-group {
+	margin: @gutter*3 0 0 0 !important;
+	position:relative;
+	
+
+	
+	
+	.@{ns}@{mod-form}-control {
+		width: 440px;
+		max-width: 100%;
+		margin-right: 5px;
+		background-color: none;
+		
+		&:focus {
+			background-color: #fff
+		}
+		
+		&.half {
+			width: 215px;
+		}
+
+		&.shorter {
+			width: 130px
+		}
+
+		&.short {
+			width: 240px
+		}
+
+		&.long {
+			width: 100%
+		}
+	}
+	
+	textarea.@{ns}@{mod-form}-control {
+		width: 100%;
+		height: 100px;
+		min-height: 40px
+	}
+	
+	dt {
+		font-style:normal !important;
+		padding:0 !important;
+		margin: 0 0 6px
+	}
+	
+	dd{
+		
+		margin:0 !important;
+		padding:0 !important;
+	}
+	
+	label {
+		position: relative;
+		font-size:@font-size-mid;
+		font-weight:bold;
+	}
+	
+	.note {
+		position:absolute;
+		display: block;
+		margin: 0;
+		font-size: @font-size-min;
+		font-weight: normal;
+		color: #666;
+		
+		.icon{
+			font-size: @font-size-min;
+			color: #999;
+			margin-right:@gutter/2;
+		}
+		
+		a{
+			color:@color-blue;
+			text-decoration:underline;
+			&:hover{
+				color:darken(@color-blue,10%)
+			}
+		}
+	}
+	
+	&.warn{
+		.note{
+			color:@color-orange;
+
+			i.icon{
+				color:@color-orange;
+			}
+		
+		}
+	}
+	
+	&.error{
+		.note {
+			color:@color-red;
+				
+				
+			i.icon{
+				color:@color-red;
+			}
+		}	
+	}
+	&.success{
+		.note{
+			color:@color-green;
+
+			i.icon{
+				color:@color-green;
+			}
+		
+		}
+	}
+}

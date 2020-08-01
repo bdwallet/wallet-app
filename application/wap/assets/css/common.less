@@ -1,0 +1,389 @@
+@import "./config";
+.fl {
+  display: block;
+  float: left;
+}
+
+.fr {
+  display: block;
+  float: right;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.icon {
+	font-weight: @font-weight-normal !important;
+}
+
+//强制不换行 超出隐藏
+// .text-nowrap{
+//   overflow: hidden;
+//   white-space: nowrap;
+// }
+//强制不换行 超出...
+// .text-nowrap-ellipsis{
+//   overflow: hidden;
+//   white-space: nowrap;
+//   text-overflow: ellipsis;
+// }
+
+// 清除浮动
+.clear{
+	zoom:1;
+	&:after{
+		visibility:hidden;
+		display:block;
+		font-size:0;
+		content:" ";
+		clear:both;
+		height:0;
+	}
+}
+
+.container{
+  padding: 0 @gutter;
+  background: @bgcolor-item;
+  overflow: hidden;
+}
+.body-bg-color{
+	background-color:@bgcolor-body;
+}
+
+.fixed{
+	position:fixed;
+	width: 100%;
+	max-width: 768px;
+}
+
+.relative{
+	position: relative;
+}
+
+//追评标签样式
+.com-zhuiping,.com-hot{
+	display: inline-block;
+	width: 1.6rem;
+	height: .8rem;
+	margin-right: .25rem;
+	border: 0.03rem solid @color-link;
+	border-radius: .1rem;
+	line-height: .8rem;
+	text-align: center;
+	font-size: .5rem;
+	color: @color-link;
+	&.com-hot{
+		background: @color-link;
+		color: #FFF;
+	}
+}
+
+//匿名者头像
+.com-anonym{
+	display: flex;
+	width: 1.55rem;
+	height: 1.55rem;
+	justify-content: center;
+	align-items: flex-end;
+	background: linear-gradient(#D9E3FF,#EFF3FF);
+	border-radius: 50%;
+	.icon{
+		line-height: 1;
+		font-size: 1.1rem;
+		color: @color-sub;
+	}
+}
+
+//红点样式
+.com-bit{
+	position: absolute;
+	top: -.2rem;
+	right: -.6rem;
+	display: block;
+	width: .5rem;
+	height: .5rem;
+	border-radius: 50%;
+	background: @color-attention;
+}
+
+// tab切换样式
+.com-tab{
+	position: fixed;
+	position: sticky;
+	position: -webkit-sticky;
+	z-index: 7;
+	top: 0;
+	width: 100%;
+	height: 2.2rem;
+	line-height: 2.2rem;
+	color: #888;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background: rgba(255, 255, 255, 0.98);
+	box-shadow: 0 0.2rem 0.2rem -0.2rem #EAEAEA;
+	.tab-item {
+		flex: 1;
+		&.current{
+			span{
+				position: relative;
+				font-size: .8rem;
+				color: @color-link;
+				&::after{
+					content:'';
+					position: absolute;
+					left: 0;
+					bottom: 0.1rem;
+					width: 100%;
+					height: 0.15rem;
+					background-color: @color-link;
+					animation: acting .2s;
+					border-radius: .15rem;
+				}
+			}
+		}
+		span{
+			display: inline-block;
+			font-size: .7rem;
+			padding: 0 0.25rem;
+			transition: .2s all;
+			&.active{
+				position: relative;
+				font-size: .8rem;
+				color: @color-link;
+				&::after{
+					content:'';
+					position: absolute;
+					left: 0;
+					bottom: 0.1rem;
+					width: 100%;
+					height: 0.15rem;
+					background-color: @color-link;
+					animation: acting .2s;
+					border-radius: .15rem;
+				}
+			}
+		}
+	}
+}
+
+// 详情页 用户吸顶
+.comp-userbox{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 7;
+	padding: .6rem .75rem;
+	background: rgba(255, 255, 255, 0.98);
+	// box-shadow: 0 0.2rem 0.2rem -0.2rem #EAEAEA;
+	.grade-hot{
+		position: absolute;
+		top:.4rem;
+		left:-.8rem;
+		padding:0 1rem;
+		transform:rotate(-45deg);
+		background: @color-link;
+		line-height: 1.2;
+		text-align: center;
+		font-size: .55rem;
+		color:#fff;
+	}
+}
+
+// 全部公告  全部评级
+.com-pro-order{
+	display: flex;
+	height: 2.3rem;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+    font-size: .7rem;
+    padding: 0 .75rem;
+    background-color: #fff;
+	margin-bottom: .125rem;
+	.order {
+		span {
+			margin-left: 1.4rem;
+		}
+		.current {
+			color: @color-link;
+		}
+	}
+}
+
+// 吸顶样式
+.com-sticky{
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0;
+}
+
+//四角边框样式
+.com-rect {
+	display: flex;
+	width: 3.3rem;
+	height: 100%;
+	border-radius: .1rem;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(to right, @color-link, @color-link) left top no-repeat, linear-gradient(to bottom, @color-link, @color-link) left top no-repeat, linear-gradient(to right, @color-link, @color-link) right top no-repeat, linear-gradient(to bottom, @color-link, @color-link) right top no-repeat, linear-gradient(to right, @color-link, @color-link) left bottom no-repeat, linear-gradient(to bottom, @color-link, @color-link) left bottom no-repeat, linear-gradient(to right, @color-link, @color-link) right bottom no-repeat, linear-gradient(to bottom, @color-link, @color-link) right bottom no-repeat;
+	background-size: .1rem .5rem, .5rem .1rem, .1rem .5rem, .5rem .1rem;
+	padding: .1rem;
+}
+
+.follow-btn{
+	font-size: .7rem;
+	font-weight: 400;
+	line-height: 1.4;
+	padding: .25rem .575rem;
+	border-radius: .75rem;
+	// 已关注
+	&.followed{
+		background: transparent;
+		border: .05rem solid #bbb;
+		color: #bbb;
+	}
+	// 未关注
+	&.not-followed{
+		background-color: #fff;
+		border: .05rem solid @color-link;
+		color: @color-link;
+		.icon{
+			font-size: .6rem;
+		}
+	}
+	&.not-followed1{
+		background-color: @color-link;
+		border: .05rem solid @color-link;
+		color: #fff;
+		.icon{
+			font-size: .6rem;
+		}
+	}
+}
+
+//富文本样式还原
+.com-detail{
+	h1,h2,h3,h4,h5,b,strong{
+		font-weight: 700 !important;
+	}
+	span,p,div,a{
+		font-weight: inherit;
+	}
+	h1{
+		font-size: x-large !important;
+	}
+	h2{
+		font-size: large !important;
+	}
+	h3{
+		font-size: auto !important;
+	}
+	h4{
+		font-size: small !important;
+	}
+	h5{
+		font-size: x-small !important;
+	}
+	h1,h2,h3,h4,h5,p{
+		margin:.75rem 0;
+	}
+	img {
+		width: 100%;
+	}
+}
+
+// 下拉菜单 选择
+.dropdown{
+	color: @color-dec;
+	.rank{
+		position: fixed;
+		top: 2.5rem;
+		z-index: 5;
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		max-width: 768px;
+		height: 2.0rem;
+		line-height: 2.0rem;
+		padding: 0 0.75rem;
+		font-size: 0.65rem;
+		border-bottom: 0.025rem solid @color-border-main;
+		background-color: @bgcolor-item;
+		.checkbtn{
+				display: flex;
+				align-items: center;
+				.icon{
+						margin-left:.5rem;
+						font-size: .4rem;
+						transition: .2s all;
+						transform: rotate(90deg);
+				}
+				&.act{
+						color:@color-link;
+						.icon{
+								transform: rotate(270deg);
+						}
+				}
+		}
+		.checkbox{
+				position: absolute;
+				left:0;
+				top:2rem;
+				width: 100%;
+				line-height: 2rem;
+				height: 6rem;
+				padding: 0 .75rem;
+				background: #FFF;
+				z-index: -1;
+				.act{
+						color: @color-link;
+				}
+		}
+	}
+	.backdrop{
+		position: fixed;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		background: rgba(0,0,0,.6);
+	}
+}
+
+// 个人中心 | 消息中心 通用列表样式
+.comp-item-list {
+	.comp-item-wrap {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: @bgcolor-item;
+		padding: 0 0.75rem;
+		font-size: 0.75rem;
+		.comp-item-right {
+			font-size: 0.65rem;
+			color: @color-dec;
+			overflow: hidden;
+		}
+		i.icon {
+			display: inline-block;
+			color: @color-time;
+			font-size: 0.6rem;
+		}
+		&:before {
+			content: "";
+			position: absolute;
+			width: e("calc(100% - 1.5rem)");
+			bottom: 0;
+			border-bottom: 1px solid @color-border-item;
+		}
+	}
+}

@@ -1,0 +1,174 @@
+
+.ext-slider{
+	position:relative;
+	overflow:hidden;
+	ul{
+		list-style:none;
+		margin:0;
+		padding:0
+		
+		li{
+			list-style:none;
+			margin:0;
+			padding:0
+		}
+	}
+	
+	
+	
+	// 上一张下一张
+	.ext-slider-ctrl{
+		position:relative;
+		z-index:3;
+		top:50%;
+		margin:-20px 0 0 0;
+		padding:0;
+		
+
+		.ext-slider-prev,
+		.ext-slider-next{
+			position:absolute;
+			cursor:pointer;
+			background:rgba(0,0,0,.2);
+			color:#fff;
+			padding:8px;
+		}
+		.ext-slider-prev{
+			left:0;
+		}
+		.ext-slider-next{
+			right:0;
+		}
+	}
+	
+	// 内容列表
+	.ext-slider-list{
+		position:absolute;
+		left:0;
+		top:0;
+		margin:0;
+		padding:0;
+		
+		li{
+			float:left;
+			z-index:1;
+			overflow:hidden;
+			&.current{
+				
+			}
+			img{
+				width:100%;
+				height:100%;
+			}
+		}
+	}
+	
+	// 底部信息
+	.ext-slider-pos{
+		width:100%;
+		height:30px;
+		line-height:30px;
+		position:absolute;
+		left:0;
+		bottom:0;
+		background:rgba(0,0,0,.5);
+		z-index:2;
+		margin:0;
+		padding:0;
+		
+		// 只显示计数器
+		&.only-num{
+			background:none;
+			.ext-slider-counter{
+				width:100%;
+				left:0;
+				right:0;
+				
+				li.num{
+					margin:0 3px;
+				}
+			}
+		}
+		
+		// 只显示标题
+		&.only-title{
+			.ext-slider-title{
+				margin:0;
+				text-align:center;
+			}
+		}
+		
+		// 文字标题
+		.ext-slider-title{
+			margin-left:10px;
+			padding:0;
+			font-size:14px;
+			li{
+				display:none;
+				overflow:hidden;
+				transition:All 0.2s ease-in-out;
+				color:#fff;
+				max-width:88%;
+				white-space:nowrap;
+				text-overflow:ellipsis;
+				
+				&.current{
+					display:block;
+				}
+			}
+		}
+		
+		
+		
+		// 索引计数器
+		.ext-slider-counter{
+			text-align:center;
+			position:absolute;
+			right:10px;
+			bottom:0;
+			
+		
+			
+			li{
+				display:inline-block;
+				cursor:pointer;
+				background:#3992FF;
+				font-size:12px;
+				color:#fff;
+				border-radius:50%;
+				width:8px;
+				height:8px;
+				margin:10px 3px;
+				transition:All 0.2s ease-in-out;
+				
+				&.num{
+					width:18px;
+					height:18px;
+					line-height:18px;
+					overflow:hidden;
+					margin:6px 3px;
+					
+					&.current{
+						color:#3992FF;
+						background:#fff;
+						border-radius:50%;
+					}
+					
+				}
+			
+				
+				&.current{
+					color:#3992FF;
+					background:#fff;
+					width:20px;
+					border-radius:4px;
+					transition:All 0.2s ease-in-out;
+				}
+			}
+		}
+		
+		
+		
+	}
+	
+}

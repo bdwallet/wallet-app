@@ -1,0 +1,133 @@
+// 重置浏览器默认样式
+
+::-webkit-scrollbar {
+	width:10px;
+}
+::-webkit-scrollbar-thumb{
+	background:@color-scrollbar;
+	border-radius:5px;
+}
+::-webkit-scrollbar-thumb:hover{
+	background-color:@color-scrollbar-hover;
+} 
+
+*{
+    -moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html{
+	-webkit-text-size-adjust:100%;
+	-ms-text-size-adjust:100%;
+	font-size:@font-size-default;
+}
+
+html,body,div,span,object,iframe,
+h1,h2,h3,h4,h5,h6,
+p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,
+dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	vertical-align:baseline;
+	background:transparent;
+	font-size:100%;
+}
+
+body{
+	font-family: Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;		
+	-moz-osx-font-smoothing:grayscale;
+	-webkit-font-smoothing:antialiased;
+	line-height:1.6;
+	background-color:@color-body;
+	min-width: 1200px;
+}
+article,address,aside,dialog,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
+	display:block;
+}
+table{
+	border-collapse:collapse;
+	border-spacing:0;
+}
+caption,th{
+	text-align:left;font-weight:normal;
+}
+
+[hidefocus],summary{
+	outline:0;
+}
+blockquote,q{
+	quotes:none;
+}
+blockquote:before,blockquote:after,q:before,q:after{
+	content:'';
+	content:none;
+}
+a{
+	margin:0;
+	padding:0;
+	vertical-align:baseline;
+	background:transparent;
+	.mixin-ease-in-out();
+	&:hover{
+		.mixin-ease-in-out();
+	}
+}
+hr{
+	display:block;
+	border:@color-border solid 1px;
+	margin:@gutter*2 0;
+}
+sub {
+	vertical-align: sub
+}
+sup {
+	vertical-align: super
+}
+sub,sup{
+	color:#ccc;
+	font-size:@font-size-min;
+}
+
+input,select{
+	vertical-align:middle;
+}
+input,button,select,textarea{
+	outline:none
+}
+input,textarea{
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	box-sizing:border-box;
+}
+textarea{
+	resize:none
+}
+
+// 计算h1-h6字号递增
+.make-heading-font-size(@n, @i: 1) when (@i =< @n) {
+  h@{i}{
+    font-size:@font-size-default + (@n - @i) * @heading-ratio;
+  }
+  .make-heading-font-size(@n, (@i + 1));
+};
+.make-heading-font-size(6);
+
+
+// 清除浮动
+.clear{
+	zoom:1;
+	&:after{
+		visibility:hidden;
+		display:block;
+		font-size:0;
+		content:" ";
+		clear:both;
+		height:0;
+	}
+}

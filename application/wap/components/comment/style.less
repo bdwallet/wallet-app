@@ -1,0 +1,255 @@
+@import "../../assets/css/config";
+.comp-comment-toolbar {
+	position: fixed;
+	bottom: @tab-height;
+    z-index: 7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+	width: 100%;
+	max-width: 768px;
+    padding: 0.4rem 0.55rem;
+    background-color: @bgcolor-item;
+    .btn-input{
+        display: flex;
+        flex:1;
+        align-items: center;
+        //width: 13.5rem;
+        height: 1.65rem;
+        padding: 0.3rem;
+        margin-right: .2rem;
+        border: .03rem solid #BCBCBC;
+        border-radius: .15rem;
+        font-size: .7rem;
+        color: @color-placeholder;
+        word-break:keep-all;
+        overflow: hidden;
+    }
+
+    .btn-like,.btn-com,.btn-col{
+        display: flex;
+        padding:.2rem;
+		&.is-like{
+			color: @color-link;
+			.icon{
+				color: @color-link;
+			}
+        }
+        .number{
+            position: relative;
+            margin-left:.1rem;
+            font-size: 0.5rem;
+            z-index: 2;
+        }
+        .icon{
+            font-size: 1.0rem;
+            color: #333;
+        }
+    }
+}
+
+.comp-comment-editor{
+    position:fixed;
+    left:0;
+    right:0;
+    bottom: 0;
+    z-index: 9;
+    padding: .55rem;
+    background: #FFF;
+    transition: all .1s;
+    .input-area{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        height: 3.25rem;
+        textarea{
+            width: 15.5rem;
+            height: 100%;
+            padding: .45rem;
+            border: .03rem solid #BCBCBC;
+            border-radius: .15rem;
+            color: @color-content;
+        }
+        //用于处理点击聚焦，禁止系统聚焦
+        .textarea-pannel{
+            position:absolute;
+            top:0;
+            left:0;
+            width: 15.5rem;
+            height: 3.25rem;
+            background: transparent;
+        }
+        .submit{
+            font-size: .8rem;
+            color: @color-dec;
+            &.ok{
+                color: @color-link;
+            }
+        }
+    }
+    .comp-uploader{
+        width: 100%;
+        padding-top: 0.4rem;
+        ul{
+            justify-content: baseline;
+            li{
+                width: 3.5rem;
+                height: 3.5rem;
+                img{
+                    width: 3.5rem;
+                    height: 3.5rem;
+                }
+            }
+        }
+    }
+    .action-area{
+        display: flex;
+        align-items: center;
+        height: 2.2rem;
+        .icon{
+            font-size: 1rem;    
+        }
+    }
+}
+
+.comp-comment-list{
+	width: 100%;
+	font-size: 0.75rem;
+	margin-top: 0.25rem;
+	.comment-title{
+        font-size: 0.75rem;
+        height: 2.4rem;
+        line-height: 2.4rem;
+        color: @color-sub;
+        padding-left: 0.75rem;
+        padding-right: .75rem;
+        border-bottom: 1px solid #F3F3F3;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .icon {
+            color: @color-dec;
+        }
+	}
+	.comment-list{
+        font-size: 0.75rem;
+		margin-top: 0.25rem;
+	}
+	.noComment{
+        font-size: 0.75rem;
+        margin-top: 0.25rem;
+    }
+}
+
+.comp-list-item, .comment-list{
+    background-color: @bgcolor-item;
+    &:first-child{
+        margin-top: 0;
+    }
+    .comp-userinfo{
+        padding: .5rem 0 0 .75rem;
+    }
+    .wrap{
+        margin: 0 0.75rem 0 3.75rem;
+        border-bottom: 1px solid #F3F3F3;
+        padding-bottom: 0.75rem;
+        .reply-content{
+            padding: .3rem;
+            margin-top: .5rem;
+            margin-bottom: .8rem;
+            font-size: 0.6rem;
+            line-height: 1.4;
+            color: #888;
+            background-color: @bgcolor-body;
+            overflow: hidden;
+            word-wrap: break-word;
+            word-break: break-all;
+            text-overflow: ellipsis;
+            .list {
+                margin-top: .3rem;
+                &:first-child{
+                    margin-top: 0;
+                }
+                &>div{
+                    display: inline;
+                }
+            }
+            .reply-txt{
+                display: inline;
+                white-space: pre-wrap;
+            }
+            .name{
+                color: @color-link;
+                font-weight: 400; 
+            }
+            .total{
+                margin-top: .3rem;
+            }
+        }
+        .content{
+            font-size: 0.75rem;
+            color: @color-sub;
+            overflow: hidden;
+            word-wrap: break-word;
+            word-break: break-all;
+            text-overflow: ellipsis;
+            .content-txt{
+                //white-space: pre-wrap;
+                margin-top: 0.2rem;
+                b{
+                    color:@color-link;
+                }
+                
+            }
+        }
+        .action{
+            display: flex;
+            align-items: center;
+            font-size: 0.7rem;
+            color: #bbb;
+            margin-top: 0.5rem;
+            .like,.del,.reply{
+                //padding: 0.25rem;
+                margin-right: 0.95rem;
+            }
+            .dump{
+                margin-right:1.2rem;
+                color: @color-link;
+            }
+            .icon{
+                font-size: 0.6rem;
+            }
+        }
+        .expand{
+            display: inline;
+            color: #5682FF;
+        }
+        .rading-imgs{
+            img{
+                max-width: 5.6rem;
+                max-height: 5.6rem;
+            }
+        }
+    }
+}
+.comment-list {
+    background: transparent;
+    .sieve{
+        display: flex;
+        align-items: center;
+        b{
+            margin-right:.5rem;
+            font-size: .6rem;
+        }
+    }
+    .comp-switch{
+        flex:1;
+    }
+}
+.comment-pater {
+    .wrap {
+        border: 0;
+    }
+}

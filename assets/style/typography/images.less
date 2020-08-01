@@ -1,0 +1,119 @@
+.typography {
+	img {
+		margin: 0 auto 20px auto;
+		display: block;
+		max-width: 100%;
+		box-sizing: content-box;
+		background-color: #fff;
+		border: transparent solid 1px;
+		cursor: default;
+		
+		&[align=right] {
+			padding-left: 20px;
+		}
+		
+		&[align=left] {
+			padding-right: 20px;
+		}
+
+		&.current{
+			border: @color-blue solid 1px;
+
+		}
+	}
+	
+	.emoji {
+		max-width: none;
+		vertical-align: middle;
+		background-color: transparent;
+	}
+	
+	
+	span.frame {
+		display: block;
+		overflow: hidden;
+	
+		> span {
+			display: block;
+			float: left;
+			width: auto;
+			padding: 7px;
+			margin: 13px 0 0;
+			overflow: hidden;
+			border: 1px solid #ddd;
+		}
+	
+		span img {
+			display: block;
+			float: left;
+		}
+	
+		span span {
+			display: block;
+			padding: 5px 0 0;
+			clear: both;
+			color: #333;
+		}
+	}
+	
+	span.align-center {
+		display: block;
+		overflow: hidden;
+		clear: both;
+	
+		> span {
+			display: block;
+			margin: 13px auto 0;
+			overflow: hidden;
+			text-align: center;
+		}
+	
+		span img {
+			margin: 0 auto;
+			text-align: center;
+		}
+	}
+	
+	span.align-right {
+		display: block;
+		overflow: hidden;
+		clear: both;
+	
+		> span {
+			display: block;
+			margin: 13px 0 0;
+			overflow: hidden;
+			text-align: right;
+		}
+	
+		span img {
+			margin: 0;
+			text-align: right;
+		}
+	}
+	
+	span.float-left {
+		display: block;
+		float: left;
+		margin-right: 13px;
+		overflow: hidden;
+		
+		span {
+			margin: 13px 0 0;
+		}
+	}
+	
+	span.float-right {
+		display: block;
+		float: right;
+		margin-left: 13px;
+		overflow: hidden;
+		
+		> span {
+			display: block;
+			margin: 13px auto 0;
+			overflow: hidden;
+			text-align: right;
+		}
+	}
+}

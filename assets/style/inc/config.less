@@ -1,0 +1,66 @@
+
+@ns:;
+
+// 最大字号
+@font-size-max:20px;
+
+// 默认字号
+@font-size-default:16px;
+
+// 中等字号
+@font-size-mid:14px;
+
+// 最小字号
+@font-size-min:12px;
+
+// h1-h6 字体递增值
+@heading-ratio:1.5;
+
+// 最大屏幕宽度
+@width-screen-max: 1200px;
+
+// 中等屏幕宽度
+@width-screen-mid: 992px;
+
+// 最小屏幕宽度
+@width-screen-min: 768px;
+
+
+// 栅格数 (为了满足首页三栏布局，所以划分了24栏)
+@grid-cols:24;
+
+// 间距 (全站的外边距和内边距都基于此值)
+@gutter:10px;
+
+// 头部高度
+@header-height:66px;
+
+// 是否固定头部
+@header-fixed: true;
+
+// 全站圆角
+.mixin-border-radius(){
+	border-radius:3px;
+};
+
+// 过渡动画
+.mixin-ease-in-out(){
+	transition:All 0.2s ease-in-out;
+};
+
+// 透明度
+.mixin-opacity(@v){
+	@var : @v*100;
+	filter:~"alpha(opacity=@{var})";
+	-ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{var})";
+	opacity:@v;
+};
+
+.mixin-round(@v:0) when (ispercentage(@v)){
+	border-radius:@v;
+};
+
+.mixin-round(@v:0) when not(ispercentage(@v)){
+	border-radius:1000px;
+};
+

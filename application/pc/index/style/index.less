@@ -1,0 +1,226 @@
+@import "../../assets/css/config";
+@import "./style-pc-common";
+@import "./style-min1600";
+@import "./style-1200-1599";
+@import "./style-320-767";
+@hosturl:'https://heizuan.oss-cn-shenzhen.aliyuncs.com/web/';
+
+.HZPJ-MAIN{
+	cursor: default;
+	.HZPJ-header{
+		position: fixed;
+		top:0;
+		left: 0;
+		width: 100%;
+		z-index: 999;
+		background: #1B191C;
+		.container{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.logo-box{
+				display: flex;
+				align-items: center;
+			}
+		}
+	}
+	.HZPJ-footer{
+		.copyright{
+			display: flex;
+			color:#fff;
+			.logo-box{
+				display: flex;
+				flex-shrink: 0;
+				align-items: center;
+			}
+			.info{
+				flex-grow:1;
+				text-align: center;
+			}
+		}
+	}
+	.HZPJ-home{
+		.bgcolor{
+		  background-color: #f8f9fb;
+		}
+		.conitem{
+			display: flex;
+			align-items: center;
+			color: #1A181B;
+			.cn{
+				color:#D1B98D;
+			}
+			&.first{
+				color:#fff;
+				.btn{
+					background:linear-gradient(270deg,rgba(209,185,141,1) 0%,rgba(221,203,170,1) 100%);
+					color:#000;
+					text-align: center;
+				}
+			}
+			&.customers{
+				.comment-list{
+					display: flex;
+					li{
+						overflow: hidden;
+						background: #fff;
+						.author{
+							display: flex;
+							align-items: center;
+							.author-avatar{
+								display: block;
+								border-radius: 50%;
+							}
+							.author-info{
+								.name{
+									color:#5682FF;
+								}
+								.job{
+									color:#1A181B;
+								}
+							}
+						}
+						.content{
+							color:#555;
+						}
+					}
+				}
+			}
+			&.partner{
+				flex-direction: column;
+				justify-content: center;
+				.partner-list{
+					display: flex;
+					justify-content: space-between;
+					flex-wrap: wrap;
+					.icon{
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						line-height: 1;
+						color:#5e5e5e;
+					}
+				}
+			}
+		}
+		.keywords{
+			height: auto !important;
+			min-height:auto !important;
+			justify-content: initial !important;
+			h3{
+				flex-shrink: 0;
+				font-size: 24px;
+				color:#D1B98D;
+			}
+			.list{
+				display: flex;
+				flex-shrink: 0;
+				flex-wrap:wrap;
+				padding-left:10px;
+				font-size: 14px;
+				span{
+					margin-right:20px;
+				}
+			}
+		}
+	}
+	.HZPJ-ratings{
+		background: #F7F9FA;
+		.search-arer{
+			color:#1A181B;
+			.search-box{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				.search-tools{
+					position: relative;
+					input{
+						border:1px solid rgba(0,0,0,0.15);
+						background:#fff;
+						color:#000;
+					}
+					.icon{
+						position: absolute;
+						line-height: 1;
+						color: #5682FF;
+					}
+				}
+			}
+		}
+	}
+	
+	.HZPJ-empty{
+		display: flex;
+		flex-direction: column;
+		min-height: 60vh;
+		justify-content: center;
+		align-items: center;
+	}
+	.ratings-list-box{
+		display: flex;
+		li{
+			position: relative;
+			overflow: hidden;
+			background: #fff;
+			.score{
+				position: absolute;
+			}
+			p{
+				color:#555;
+			}
+			.info{
+				display: flex;
+				align-items: center;
+				.name{
+					h1{
+						color:#101010;
+					}
+				}
+			}
+		}
+	}
+
+
+
+	.fade-left-enter-active,
+	.fade-right-enter-active,
+	.fade-top-enter-active,
+	.fade-bottom-enter-active {
+		transition: all 1s;
+	}
+	.fade-left-enter {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+	.fade-right-enter {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	.fade-top-enter {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	.fade-bottom-enter {
+		opacity: 0;
+		transform: translateY(-30px);
+	}
+}
+@media only screen and (min-width: 1600px) {
+	.style-pc-common;
+	.style-min1600;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1599px) {
+	.style-pc-common;
+	.style-1200-1599;
+	.container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+	//.style-768-1199;
+	.style-320-767;
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+	.style-320-767;
+}

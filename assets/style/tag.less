@@ -1,0 +1,66 @@
+@mod-tag: tag;
+
+.@{ns}@{mod-tag} {
+	display: inline-block;
+	padding:@gutter/10 @gutter/2;
+	font-size:@font-size-min;
+	color: #fff !important;
+	text-align: center;
+	background-color: #999;
+	border-radius: 3px
+}
+
+.@{ns}@{mod-tag}-dark{
+	background-color: @color-dark;
+}
+
+.@{ns}@{mod-tag}-light{
+	background-color: @color-light;
+}
+.@{ns}@{mod-tag}-gray{
+	background-color: @color-gray;
+}
+.@{ns}@{mod-tag}-red{
+	background-color: @color-red;
+}
+.@{ns}@{mod-tag}-orange{
+	background-color: @color-orange;
+}
+.@{ns}@{mod-tag}-blue{
+	background-color: @color-blue;
+}
+.@{ns}@{mod-tag}-green{
+	background-color: @color-green;
+}
+.@{ns}@{mod-tag}-purple{
+	background-color: @color-purple;
+}
+
+a{
+	&.@{ns}@{mod-tag}-dark:hover{
+		background-color: darken(@color-dark,10%);
+	}
+
+	&.@{ns}@{mod-tag}-light:hover{
+		background-color: darken(@color-light,10%);
+	}
+	&.@{ns}@{mod-tag}-gray:hover{
+		background-color: darken(@color-gray,10%);
+	}
+	&.@{ns}@{mod-tag}-red:hover{
+		background-color: darken(@color-red,10%);
+	}
+	&.@{ns}@{mod-tag}-orange:hover{
+		background-color: darken(@color-orange,10%);
+	}
+	&.@{ns}@{mod-tag}-blue:hover{
+		background-color: darken(@color-blue,10%);
+	}
+	&.@{ns}@{mod-tag}-green:hover{
+		background-color: darken(@color-green,10%);
+	}
+	&.@{ns}@{mod-tag}-purple:hover{
+		background-color: darken(@color-purple,10%);
+	}
+}
+

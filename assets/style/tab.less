@@ -1,0 +1,40 @@
+// 选项卡
+.tab {
+	.tab-nav{
+		border-bottom:@color-border solid 1px;
+		a{
+			display:inline-block;
+			padding:0 0 @gutter 0;
+			margin-right:@gutter*2;
+			color:@color-dark;
+			cursor:pointer;
+			border-bottom:transparent solid 3px;
+			margin-bottom:-2px;
+			
+			&.current{
+				color:@color-blue;
+			    border-bottom:@color-blue solid 3px;
+				
+			}
+			
+			&.right{
+				float: right;
+				margin-right: 0;
+				font-size: @font-size-min;
+				color: @color-blue;
+				line-height:2;
+				
+				&:hover{
+					text-decoration:underline;
+				}
+			}
+		}
+	}
+	.tab-content{
+		margin:@gutter*2 0;	
+	}
+}
+.tab-content{
+	margin:@gutter*2 0;	
+}
+

@@ -1,0 +1,360 @@
+@import "../../assets/css/config";
+.paper-write{
+	position: relative;
+	padding: 0.7rem 0.75rem 3rem;
+	font-size: 0.6rem;
+	color: #B54A1C;
+	.content{
+		position: relative;
+		padding: 0.75rem 0.75rem 1.875rem;
+		border: 0.1rem solid #69BA7E;
+		border-radius: 1.25rem;
+		box-shadow:0px 0px 4px 0px rgba(75,24,2,0.5);
+		background-color: #FFFBE1;
+		.userinfo{
+			display: flex;
+			padding: 0.25rem 0.25rem 0.8rem;
+			border-bottom: 0.1rem dashed  #FFE2CC;
+			.user_photo{
+				width: 2.0rem;
+				height: 2.0rem;
+				margin-right: 0.6rem;
+				img{
+					width: 100%;
+					height: 100%;
+					border-radius: 50%;
+				}
+			}
+			.user_name{
+				font-size: 0.75rem;
+				line-height: 1.05rem;
+				color: #4B1802;
+			}
+			.user_post{
+				margin-top: 0.2rem;
+				line-height: 0.8rem;
+			}
+		}
+		.write-wrap{
+			padding: 0.25rem;
+			.star-exponent{
+				.star-title{
+					padding: 0.6rem 0;
+					line-height: 0.8rem;
+					text-align: center;
+				}
+				.marking{
+					display: flex;
+					.markstar{
+						margin-right: 0.25rem;
+					}
+				}
+			}
+			.label{
+				.label-title{
+					padding: 0.8rem 0.6rem;
+					line-height: 0.8rem;
+					text-align: center;
+				}
+				ul{
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-between;
+					li{
+						width: 4.05rem;
+						height: 1.4rem;
+						margin-bottom: 0.6rem;
+						line-height: 1.4rem;
+						text-align: center;
+						color: #B54A1C;
+						border: 0.05rem solid #B54A1C;
+						border-radius: 0.65rem;
+						&:nth-child(3n){
+							margin-right: 0;
+						}
+						&.active{
+							background-color: #B54A1C;
+							color: #fff;
+							border: 0;
+						}
+					}
+				}
+			}
+			.edit-area{
+				height: 10.0rem;
+				background-color: #FDF1D3;
+				border-radius: 0.175rem;
+			  padding: 0.6rem;
+				textarea{
+					width: 100%;
+					height: 7.5rem;
+					padding: 0;
+					border: none;
+					outline: none;
+					color: #4B1802;
+					background-color: #FDF1D3;
+					&::-webkit-input-placeholder{
+						color:#B54A1C;
+					}
+				}
+				.edit-bottom{
+					display: flex;
+					justify-content: space-between;
+					.anony{
+						i{
+							font-size: 0.6rem;
+						}
+					}
+				}
+			}
+		}
+		.submit{
+			position: absolute;
+			bottom: -1.3rem;
+			left: 50%;
+			transform: translateX(-50%);
+			color: #FFFFFF;
+			font-size: 0.9rem;
+			text-align: center;
+			line-height: 2.25rem;
+		}
+	}
+	
+}
+.paper-share,.paper-shareout{
+	position: relative;
+	padding: 0.7rem 0.75rem;
+	font-size: 0.8rem;
+	color: #4B1802;
+	margin-bottom: 2.5rem;
+	&.paper-shareout{
+		padding-top: 2.7rem;
+	}
+	.content{
+		position: relative;
+		z-index: 0;
+		padding: 0.75rem 0.75rem 1.5rem;
+		border: 0.1rem solid #69BA7E;
+		border-radius: 1.25rem;
+		box-shadow:0px 0px 4px 0px rgba(75,24,2,0.5);
+		background-color: #FFFBE1;
+		.content-title{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			color: #DEAE87;
+			font-size: 0.6rem;
+			line-height: 0.8rem;
+		}
+		.dialog{
+			margin-top: 1.0rem;
+			font-size: 0.7rem;
+			span{
+				margin-right: 0.6rem;
+				font-size: 0.9rem;
+				font-weight: 500;
+			}
+		}
+		.user-photo{
+			position: relative;
+			margin: 0.6rem auto 0.55rem;
+			.press-save{
+			  display: flex;
+        align-items: center;
+        position: relative;
+        left: -0.75rem;
+				font-size: 0.5rem;
+				color: #DEAE87;
+				width: 0.6rem;
+				height: 100%;
+			}
+			.sprites-stamp1{
+				position: absolute;
+				right: -2.3rem;
+				bottom: -0.3rem;
+			}
+			img{
+					width: 3.85rem;
+			    height: 5.1rem;
+			    position: absolute;
+			    left: 0.9rem;
+			    top: 1.0rem;
+				}
+		}
+		.office{
+			font-size: 0.7rem;
+			text-align: center;
+		}
+		.marking{
+			display: flex;
+			justify-content: center;
+			margin-top: 0.4rem;
+			.markstar{
+				margin-right: 0.2rem;
+			}
+		}
+		.appraisal{
+			margin: 0.6rem 0;
+			word-break: break-all;
+		}
+		.like{
+			margin-bottom: 0.75rem;
+			text-align: right;
+			font-size: .6rem;
+			color: #DEAE87;
+			&.current{
+				color: #B54A1C;
+			}
+		}
+		.btn-group{
+			position: absolute;
+			width: 100%;
+		  height: 2.6rem;
+			left: 0;
+			z-index: 1;
+			bottom: -1.3rem;
+			display: flex;
+			justify-content: space-between;
+			color: #FFFFFF;
+			font-size: 0.85rem;
+			font-weight: 600;
+			line-height: 2.35rem;
+			text-align: center;
+			.doLike{
+				position: relative;
+				width: 2.7rem;
+				height: 2.7rem;
+				background-size: 100% 100%;
+				border-radius: 50%;
+				.num{
+					position: absolute;
+					left: 1.75rem;
+					font-size: 0.5rem;
+					line-height: 0.8rem;
+					border-radius: 0.4rem;
+					height: 0.8rem;
+					padding: 0 0.4rem;
+					background-color: #FF8181;
+				}
+			}
+		}
+		.shareimg{
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			opacity:0;
+			width: 100%;
+			height: 14.1rem;
+		}
+	}
+	.gosupects{
+		.sprites-share-bg1{
+			position: fixed;
+			left: 1.25rem;
+			top: 1.35rem;
+		}
+		.sprites-share-supects{
+			position: fixed;
+			right: 0;
+			top: 0;
+		}
+	}
+	.sharecanvasbox{
+		position: absolute;
+		top: 0;
+		overflow: auto;
+		 z-index:-100;
+		 .sharecanvas{
+				position: absolute;
+				top: 0.75rem;
+				background-repeat: no-repeat;
+		    background-position: center center;
+		    background-size: 100% 100%;
+		    width: 100vw;
+		    padding: 0.7rem 0.75rem;
+		    margin: -0.7rem -0.75rem;
+		    padding-bottom: 2.5rem;
+		   
+			}
+			.rcode{
+				display: flex;
+				height: 3.5rem;
+				margin: 1.0rem 0;
+				p{
+					font-size: 0.7rem;
+					color: #B54A1C;
+					margin-top: 0.6rem;
+					margin-left: 0.75rem;
+				}
+				p:last-child{
+					color: #4B1802;
+					margin-top: 0.25rem;
+				}
+				img{
+					width: 3.5rem;
+					height: 3.5rem;
+				}
+			}
+		 .shareicon{
+		 	 background-size: 5.6rem 13.9rem;
+		 }
+		 .sprites-record-poiont{
+		 		.shareicon;
+			 	width: 0.4rem;
+			 	height: 0.4rem;
+			 	background-position: 0 0;
+		 }
+		 .sprites-photo-frame1{
+				.shareicon;
+				width: 5.525rem;
+				height: 6.9rem;
+				background-position: 0 -6.9rem;
+		 }
+		 .sprites-stamp1{
+		 	.shareicon;
+		 	width: 5.4rem;
+		 	height: 5.4rem;
+		 	background-position: 0 -1.075rem;
+		 } 
+		 .sprites-light-star{
+			 	.shareicon;
+			 	width: 0.85rem;
+			 	height: 0.85rem;
+			 	background-position: -0.8rem 0;
+		 }
+		 .sprites-dark-star{
+		 		.shareicon;
+			 	width: 0.85rem;
+			 	height: 0.85rem;
+			 	background-position: -1.9rem 0;
+		 }
+	}
+	.share{
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 9999;
+		img{
+		  position: relative;
+      z-index: 11;
+			display: block;
+			width: 16.8rem;
+			height: 9.75rem;
+			left: -0.25rem;
+			top: 0.6rem;
+			margin: 0 auto;
+		}
+		.blackzoom{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background:rgba(0,0,0,0.75);
+		}
+	}
+}

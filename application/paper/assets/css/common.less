@@ -1,0 +1,190 @@
+@import "./config";
+@import "./animate";
+@import "../icon/index";
+@import "./animate.min.css";
+@import "./image.less";
+
+ 
+
+*{
+  -moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html,body,div,span,object,iframe,
+h1,h2,h3,h4,h5,h6,
+p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,
+dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+  list-style: none;
+	vertical-align:baseline;
+	background:transparent;
+	font-size:100%;
+  font-weight: @font-weight-normal;
+}
+
+html{
+	-webkit-text-size-adjust:100%;
+	-ms-text-size-adjust:100%;
+	font-size:@font-size-default;
+}
+
+body{
+	font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;		
+	-moz-osx-font-smoothing:grayscale;
+	-webkit-font-smoothing:antialiased;
+	line-height:1.6;
+	overflow-x: hidden;
+	max-width: 768px;
+	margin: 0 auto;
+}
+
+article,address,aside,dialog,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
+	display:block;
+}
+table{
+	border-collapse:collapse;
+	border-spacing:0;
+}
+caption,th{
+  text-align:left;
+  font-weight:@font-weight-normal;
+}
+
+[hidefocus],summary{
+	outline:0;
+}
+blockquote,q{
+	quotes:none;
+}
+blockquote:before,blockquote:after,q:before,q:after{
+	content:'';
+	content:none;
+}
+
+img{
+  display: inline-block;
+  font-size: 0;
+}
+
+a {
+	margin:0;
+	padding:0;
+	vertical-align:baseline;
+	background:transparent;
+  text-decoration: none;
+  color: @color-link;
+  cursor: pointer;
+  .mixin-ease-in-out();
+	&:hover{
+		.mixin-ease-in-out();
+	}
+}
+
+sub {
+	vertical-align: sub
+}
+sup {
+	vertical-align: super
+}
+sub,sup{
+	color:#ccc;
+}
+
+input,select{
+	vertical-align:middle;
+}
+input,button,select,textarea{
+	outline:none
+}
+input,textarea{
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	box-sizing:border-box;
+}
+textarea{
+	resize:none
+}
+
+input::-webkit-input-placeholder{
+	color:@color-dec;
+}
+input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+	color:@color-dec;
+}
+input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+	color:@color-dec;
+}
+input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+	color:@color-dec;
+}
+
+
+.fl {
+  display: block;
+  float: left;
+}
+
+.fr {
+  display: block;
+  float: right;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.icon {
+  font-weight: @font-weight-normal !important;
+}
+
+//强制不换行 超出隐藏
+.text-nowrap{
+  overflow: hidden;
+  white-space: nowrap;
+}
+//强制不换行 超出...
+.text-nowrap-ellipsis{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// 清除浮动
+.clear{
+	zoom:1;
+	&:after{
+		visibility:hidden;
+		display:block;
+		font-size:0;
+		content:" ";
+		clear:both;
+		height:0;
+	}
+}
+
+.container{
+  padding: 0 @gutter;
+  background: @bgcolor-item;
+  overflow: hidden;
+}
+.body-bg-color{
+	background-color:@bgcolor-body;
+}
+
+.fixed{
+	position:fixed;
+	width: 100%;
+	max-width: 768px;
+}

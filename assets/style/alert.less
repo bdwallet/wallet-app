@@ -1,0 +1,42 @@
+.alert{
+	position:
+	relative;padding:15px;
+	font-size:14px;
+	line-height:1.5;
+	color:darken(@color-blue, 20%);
+	background-color:lighten(@color-blue, 40%);
+	border:1px solid lighten(@color-blue, 35%);
+	border-radius:3px;
+	p:last-child{margin-bottom:0}
+	a{
+		font-weight:bold;
+		text-decoration:none;
+		color:darken(@color-blue, 20%);
+		&:hover{ text-decoration: underline}
+	}
+}
+.alert-messages{margin-bottom:20px}
+.alert-close{
+	float:right;width:34px;height:44px;margin:-11px;line-height:40px;color:inherit;text-align:center;cursor:pointer;background:none;border:0;-webkit-appearance:none;-moz-appearance:none;appearance:none;opacity:0.6;background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAQAAACR313BAAAAhUlEQVQoz42RQQ7DIAwE90/zjpIcCXwr6dfgK5EiuYckjfGhqrjgnQWbRYhEI6NhZRoJiRc7xkFxsHBg7EyiY9hgOKFhdJG/xWkors4Kwur2FcXrzMMbR8MFHyxWh7db/ev0z95+8necPI8CdXx3i/2coYt0ZV5d5vXJXMw0lvBjC40ZfQDH5qu0AoIIzAAAAABJRU5ErkJggg==) no-repeat center ; background-size:10px;
+	&:hover{opacity:1}
+}
+
+
+.alert-warn{
+	color:darken(@color-orange, 40%);
+	background-color:lighten(@color-orange, 33%);
+	border:1px solid lighten(@color-orange, 25%);
+	a{color:darken(@color-orange, 40%);}
+}
+.alert-success{
+	color:darken(@color-green, 30%);
+	background-color:lighten(@color-green, 35%);
+	border:1px solid lighten(@color-green, 25%);
+	a{color:darken(@color-green, 30%);}
+}
+.alert-error{
+	color:darken(@color-red, 30%);
+	background-color:lighten(@color-red, 35%);
+	border:1px solid lighten(@color-red, 30%);
+	a{color:darken(@color-red, 30%);}
+}

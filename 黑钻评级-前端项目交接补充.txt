@@ -1,0 +1,3 @@
+1、ficialMent 文件下 main.vue文件里面 methods 里面 服务协议跳转未完成；
+2、ficialMent 文件下 main.vue文件里面 methods 里面 充值未与钱包对接未完成；
+3、ficialMent 文件下 purchistoryDetail.vue文件里面 template 里面【温馨提示】下提示未给出具体文案。
