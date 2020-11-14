@@ -183,7 +183,7 @@
 					<div class="codeimg-list">
 						<img :src="$assets.kefuewm">
 						<div class="codeimg-txt">
-							<p>商务合作</p>
+							<p>{{ $lang("商务合作") }}</p>
 						</div>
 					</div>
 				</div>
