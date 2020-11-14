@@ -27,6 +27,7 @@
     "vswipe": "1.0.1",
     "vue": "^2.2.2",
     "vue-awesome-mui": "^1.7.3",
+    "vue-i18n": "^8.22.1",
     "vue-router": "^2.3.0",
     "vue-scroller": "2.2.0",
     "vuex": "^2.0.0-rc.6",
