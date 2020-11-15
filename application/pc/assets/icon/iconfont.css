@@ -131,3 +131,10 @@
   content: "\e696";
 }
 
+.tab-wap-item{
+  display: flex;
+}
+
+.tab-wap-item div{
+  margin: 0 0.75rem;
+}
