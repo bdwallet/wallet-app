@@ -1,116 +1,98 @@
-# 黑钻评级前端开发文档
+# Black Diamond Wallet
+BD Wallet is the world’s first decentralized blockchain rating model. Through community rating reports, users’ understanding and awareness of blockchain are improved; at the same time, we provide users with secure blockchain asset storage and professional blockchain Financial Services. We also actively participate in the construction of Polkadot's ecology and are committed to achieving the goals and missions of web3.0.
+
+# Overview
++ [app](https://github.com/bdwallet/wallet-app/tree/master/application/APP): the app of the BDWallet
++ [pc](https://github.com/bdwallet/wallet-app/tree/master/application/pc): the website of the BDWallet
++ [wap](https://github.com/bdwallet/wallet-app/tree/master/application/wap): the mobile website of the BDWallet
+
+# Stack
 ------
-> * 使用nodejs 自动构建打包的单页面应用
-> * 技术栈 `nodejs` `vue2` `vuex` `vue-router` `webpack` `axios` `Mock` `Less` `ES6`
+> * Use nodejs to automatically build a packaged single page application
+> * `nodejs` `vue2` `vuex` `vue-router` `webpack` `axios` `Mock` `Less` `ES6`
 
 
-# 安装
+# Development
 ------
 
 ``` shell
-# 安装nodejs
+# install nodejs
 https://nodejs.org
 
-# 转至项目根目录
+# Clone this repo
+git clone https://github.com/bdwallet/wallet-app.git
+
+# Go to the project root directory
 cd your path ...
 
-# 安装依赖
+# install dependencies
 npm install
 
-# 编译dll
+# compile dll
 npm run dll appName
 
-# 调试项目
+# run app
 npm run dev appName
+```
 
-# 编译打包
+# Release
+``` shell
 npm run pro appName
 ```
 
-# 调试
-------
-
-1. 本地安装nginx或apache支持（可使用phpstudy）
-2. 避免跨域，请将测试服务器API代理至本地
-3. phpstudy配置
-server {
-        listen 8080;
-        #server_name  xxx.xxx.com;
-        location / {
-            proxy_pass http://localhost:8080;
-            proxy_redirect default;
-        }
-        location /api {
-            rewrite  ^/api/(.*)$ /$1 break;
-            proxy_pass   http://dev.heizuan.com; //测试服务器
-        }
-}
-
-# 项目结构
+# Project structure
 ------
 
 root
-|-- application // 项目文件
-|   |-- doc //公共组件文档
+|-- application
+|   |-- doc
 |   |   |-- ...
-|   |-- pc // 黑钻评级官网端应用
-|   |   |-- assets // 静态资源
-|   |   |-- components // 项目组件
-|   |   |-- pages // 业务页面
-|   |   |   |-- index // 首页（静态页面）
-|   |   |   |-- user // 会员中心（单页）
+|   |-- pc // BDWallet website
+|   |   |-- assets
+|   |   |-- components
+|   |   |-- pages
+|   |   |   |-- index
+|   |   |   |-- user
 |   |   |   |-- ... 
 |   |   |-- script
-|   |   |-- config // 编译配置
+|   |   |-- config
 |   |   |-- ...
-|   |-- wap // 黑钻评级H5/APP应用
-|   |   |-- appcomps // APP端组件
-|   |   |-- assets // 静态资源
-|   |   |-- components // 公用组件
-|   |   |-- layout // 公用局部视图
-|   |   |-- pages // 业务页面
-|   |   |   |-- down // APP下载页
-|   |   |   |-- index // 项目入口
-|   |   |   |-- pro // 三方合作落地页
+|   |-- wap // BDWallet mobile website
+|   |   |-- appcomps
+|   |   |-- assets
+|   |   |-- components
+|   |   |-- layout
+|   |   |-- pages
+|   |   |   |-- down
+|   |   |   |-- index
+|   |   |   |-- pro
 |   |   |   |-- ... 
-|   |   |-- script // 公用业务、工具类
-|   |   |-- config // 编译配置
-|   |   |-- README.md // 项目说明文档   **运行必读** ******
-|   |   |-- ...
-|   |-- APP // Hbuilder打包APP项目
-|   |   |-- static // 打包项目编译成功后的项目文件
-|   |   |-- unpackage // APP打包资源目录
-|   |   |-- index.html // 打包项目编译成功后的入口文件
-|   |   |-- manifest.json // Hbuilder项目配置文件
-|   |   |-- ...
-|   |-- paper // 人物评级应用
-|   |   |-- assets // 静态资源
-|   |   |-- components // 项目组件
-|   |   |-- index // 项目入口
 |   |   |-- script
-|   |   |-- config // 编译配置
+|   |   |-- config
+|   |   |-- README.md
 |   |   |-- ...
-|-- assets // 公共静态资源
-|-- compiled // 编译文件目录
-|-- components // 前“黑钻财经”项目公共组件 **已废弃**
-|-- documents // 文档资料及其他
-|-- node_modules // node模块
-|-- .babelrc // ES6编译配置
-|-- build.js // 项目编译器
-|-- package.json // 依赖模块元数据
-|-- README.md  // 说明文档
+|   |-- APP // Hbuilder compiled APP
+|   |   |-- static
+|   |   |-- unpackage
+|   |   |-- index.html
+|   |   |-- manifest.json
+|   |   |-- ...
+|   |-- paper // rating
+|   |   |-- assets
+|   |   |-- components
+|   |   |-- index
+|   |   |-- script
+|   |   |-- config
+|   |   |-- ...
+|-- assets
+|-- compiled
+|-- components
+|-- documents
+|-- node_modules
+|-- .babelrc
+|-- build.js
+|-- package.json
+|-- README.md
 
-
-# 开发规则
-------
-
-1.  请勿将项目源码分享和外泄
-2.  请勿擅自修改和删除项目配置文件、组件、UI
-3.  请使用ES6、ES7语法,使用 `const` 和 `let` 代替 `var`, 使用箭头函数
-4.  请使用Less编写样式,颜色、尺寸等参数请调用全局配置
-5.  敏感语义化的样式请在独立组件内添加 `scoped`,避免污染全局样式。
-6.  请使用组件标签，请勿擅自添加和使用其他组件。
-7.  修改和保存文件请清除文件BOM头
-8.  开发或修改之前请保持代码同步，先更新再提交
-9.  提交版本请注释功能或更新内容
-10. 请勿提交`compiled` `node_modules`
+# note
+This is the old version of BDWallet, the new version of BDWallet will implement Hierarchical Deterministic Wallet and fully support the polkadot ecology, so stay tuned
