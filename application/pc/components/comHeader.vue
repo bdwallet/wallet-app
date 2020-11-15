@@ -13,9 +13,14 @@
         <router-link tag="li" to="/ratings">{{ $lang("评级") }}</router-link>
         <li @click="handleChangeLanguage">{{ $lang("English") }}</li>
       </ul>
-      <router-link class="tab-wap" tag="div" to="/ratings">
-        <i class="icon icon-pingji"></i>
-      </router-link>
+      <div class="tab-wap tab-wap-item">
+        <router-link tag="div" to="/ratings">
+          <i class="icon icon-pingji"></i>
+        </router-link>
+        <div @click="handleChangeLanguage">
+          <i :class="`icon icon-pingji icon-${$i18n.locale}`"></i>
+        </div>
+      </div>
     </div>
   </div>
 </template>
