@@ -43,6 +43,7 @@ npm run pro appName
 # Project structure
 ------
 
+```shell
 root
 |-- application
 |   |-- doc
@@ -93,6 +94,6 @@ root
 |-- build.js
 |-- package.json
 |-- README.md
-
+```
 # note
 This is the old version of BDWallet, the new version of BDWallet will implement Hierarchical Deterministic Wallet and fully support the polkadot ecology, so stay tuned
