@@ -16,6 +16,7 @@
                 <!-- <p class="wap-show">关注“黑钻评级”服务号</p> -->
                 <p>{{ $lang("开启区块链世界之旅")}}</p>
               </div>
+              <img style="width:250px;height:90px;margin-left:100px" src="../../assets/image/web3foundation.png" />
             </div>
             <!-- 查看白皮书 -->
             <div class="btns">
@@ -235,9 +236,15 @@
         </transition>
         <transition name="fade-bottom">
           <ul v-show="section.ninth" class="partner-list">
-            <li class="icon icon-aex"></li>
-            <li class="icon icon-zgtop"></li>
-            <li class="icon icon-cex"></li>
+            <li class="icon">
+              <img width="150" src="../../assets/image/polkadot.png">
+            </li>
+            <li class="icon">
+              <img width="120" src="../../assets/image/web3.jpg">
+            </li>
+            <li class="icon">
+             <img width="120" src="../../assets/image/kusama.png">
+            </li>
             <li class="icon icon-ziyuan"></li>
             <li class="icon icon-exnow"></li>
             <li class="icon icon-jinta"></li>
