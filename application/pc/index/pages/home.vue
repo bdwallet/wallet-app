@@ -23,6 +23,9 @@
               <div class="btn wap-show" @click="Download">{{ $lang("下载APP")}}</div>
               <div class="btn" v-if="0" @click="Viewbook">{{ $lang("查看白皮书")}}</div>
             </div>
+              <div class="wap-show">
+                <img style="width:250px;height:90px;margin-top:20px;" src="../../assets/image/web3foundation.png" />
+              </div>
           </div>
         </transition>
         <transition name="fade-right">
