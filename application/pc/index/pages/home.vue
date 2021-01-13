@@ -16,7 +16,7 @@
                 <!-- <p class="wap-show">关注“黑钻评级”服务号</p> -->
                 <p>{{ $lang("开启区块链世界之旅")}}</p>
               </div>
-              <img style="width:250px;height:90px;margin-left:100px" src="../../assets/image/web3foundation.png" />
+              <!-- <img style="width:250px;height:90px;margin-left:100px" src="../../assets/image/web3foundation.png" /> -->
             </div>
             <!-- 查看白皮书 -->
             <div class="btns">
@@ -24,7 +24,7 @@
               <div class="btn" v-if="0" @click="Viewbook">{{ $lang("查看白皮书")}}</div>
             </div>
               <div class="wap-show">
-                <img style="width:250px;height:90px;margin-top:20px;" src="../../assets/image/web3foundation.png" />
+                <!-- <img style="width:250px;height:90px;margin-top:20px;" src="../../assets/image/web3foundation.png" /> -->
               </div>
           </div>
         </transition>
